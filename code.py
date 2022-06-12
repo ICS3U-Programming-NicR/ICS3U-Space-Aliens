@@ -4,9 +4,9 @@
 # Date: 03/25/2022
 # Description: CPT game EdgeBadge
 
-import ugame
-import stage
 import constants
+import stage
+import ugame
 
 
 def game_scene():
