@@ -1,4 +1,3 @@
-
 #!/usr/bin/env python3
 # Created By: Nicolas Riscalas
 # Date: 03/25/2022
@@ -12,14 +11,16 @@ import ugame
 def game_scene():
 
     # load the background image
-    image_bank_background = stage.Bank.from_bmp16(
-        "space_aliens_background.bmp"
-    )
+    image_bank_background = stage.Bank.from_bmp16("space_aliens_background.bmp")
     image_bank_sprites = stage.Bank.from_bmp16("space_aliens.bmp")
     # creates the 10 by 8 image grid, sets the background image to background
-    background = stage.Grid(image_bank_background, constants.SCREEN_GRID_X, constants.SCREEN_GRID_Y)
+    background = stage.Grid(
+        image_bank_background, constants.SCREEN_GRID_X, constants.SCREEN_GRID_Y
+    )
 
-    ship = stage.Sprite(image_bank_sprites, 5, 75, constants.SCREEN_Y - (2 * constants.SPRITE_SIZE))
+    ship = stage.Sprite(
+        image_bank_sprites, 5, 75, constants.SCREEN_Y - (2 * constants.SPRITE_SIZE)
+    )
     # 60 means it will update it 60 times a second
     game = stage.Stage(ugame.display, constants.FPS)
     # accesses the first layer(background) and makes the list of images for the background
@@ -44,6 +45,7 @@ def game_scene():
             if ship.x != constants.SCREEN_X - constants.SPRITE_SIZE:
                 ship.move(ship.x + 1, ship.y)
                 print("right")
+
         # when the left button is pressed move left 
         if keys & ugame.K_LEFT:
             if ship.x != 0:
@@ -67,4 +69,3 @@ def game_scene():
 if __name__ == "__main__":
     
     game_scene()
-   
