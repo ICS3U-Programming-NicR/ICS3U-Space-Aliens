@@ -20,4 +20,5 @@ TOTAL_NUMBER_OF_ALIENS = 5
 # set the max FPS
 FPS = 60
 # set the sprite's movement speed
+
 SPRITE_MOVEMENT_SPEED = 1
