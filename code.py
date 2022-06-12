@@ -45,8 +45,7 @@ def game_scene():
             if ship.x != constants.SCREEN_X - constants.SPRITE_SIZE:
                 ship.move(ship.x + 1, ship.y)
                 print("right")
-
-        # when the left button is pressed move left 
+        # when the left button is pressed move left
         if keys & ugame.K_LEFT:
             if ship.x != 0:
                 ship.move(ship.x - 1, ship.y)
@@ -67,5 +66,5 @@ def game_scene():
 
 
 if __name__ == "__main__":
-    
+
     game_scene()
