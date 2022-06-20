@@ -3,8 +3,8 @@
 # Date: 03/25/2022
 # Description: CPT game EdgeBadge
 
-import time
 import random
+import time
 
 import constants
 import stage
