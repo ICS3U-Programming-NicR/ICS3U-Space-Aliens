@@ -406,7 +406,7 @@ def menu_scene():
 
 
 def game_scene():
-    speed = 1
+    speed = 2
     # boolean for checking if jump
     playsound = True
     button_pressed = False
@@ -697,90 +697,90 @@ def game_scene():
             elif random_cactus == 21:
                 array_big_cactus_1_2.move(constants.BIG_CACTUS_X, constants.TREX_Y)
                 array_big_cactus_1_1.move(constants.BIG_CACTUS_X + 9, constants.TREX_Y)
-                big_cactus_1.move(constants.BIG_CACTUS_X + 9, constants.TREX_Y)
+                big_cactus_1.move(constants.BIG_CACTUS_X + 18, constants.TREX_Y)
                 three_cactus_big1_moving = True
             elif random_cactus == 22:
                 array_big_cactus_1_1.move(constants.BIG_CACTUS_X, constants.TREX_Y)
                 big_cactus_1.move(constants.BIG_CACTUS_X + 9, constants.TREX_Y)
-                big_cactus_2.move(constants.BIG_CACTUS_X + 9, constants.TREX_Y)
+                big_cactus_2.move(constants.BIG_CACTUS_X + 18, constants.TREX_Y)
                 three_cactus_big2_moving = True
             elif random_cactus == 23:
                 array_big_cactus_1_1.move(constants.BIG_CACTUS_X, constants.TREX_Y)
                 big_cactus_2.move(constants.BIG_CACTUS_X + 9, constants.TREX_Y)
-                big_cactus_1.move(constants.BIG_CACTUS_X + 9, constants.TREX_Y)
+                big_cactus_1.move(constants.BIG_CACTUS_X + 18, constants.TREX_Y)
                 three_cactus_big3_moving = True
             elif random_cactus == 24:
                 big_cactus_1.move(constants.BIG_CACTUS_X, constants.TREX_Y)
                 array_big_cactus_2_1.move(constants.BIG_CACTUS_X + 9, constants.TREX_Y)
-                big_cactus_2.move(constants.BIG_CACTUS_X + 9, constants.TREX_Y)
+                big_cactus_2.move(constants.BIG_CACTUS_X + 18, constants.TREX_Y)
                 three_cactus_big4_moving = True
             elif random_cactus == 25:
                 array_big_cactus_2_2.move(constants.BIG_CACTUS_X, constants.TREX_Y)
                 array_big_cactus_2_1.move(constants.BIG_CACTUS_X + 9, constants.TREX_Y)
-                big_cactus_2.move(constants.BIG_CACTUS_X + 9, constants.TREX_Y)
+                big_cactus_2.move(constants.BIG_CACTUS_X + 18, constants.TREX_Y)
                 three_cactus_big5_moving = True
             elif random_cactus == 26:
                 array_big_cactus_2_1.move(constants.BIG_CACTUS_X, constants.TREX_Y)
                 big_cactus_2.move(constants.BIG_CACTUS_X + 9, constants.TREX_Y)
-                big_cactus_1.move(constants.BIG_CACTUS_X + 9, constants.TREX_Y)
+                big_cactus_1.move(constants.BIG_CACTUS_X + 18, constants.TREX_Y)
                 three_cactus_big6_moving = True
             elif random_cactus == 27:
                 array_big_cactus_2_1.move(constants.BIG_CACTUS_X, constants.TREX_Y)
                 big_cactus_1.move(constants.BIG_CACTUS_X + 9, constants.TREX_Y)
-                big_cactus_2.move(constants.BIG_CACTUS_X + 9, constants.TREX_Y)
+                big_cactus_2.move(constants.BIG_CACTUS_X + 18, constants.TREX_Y)
                 three_cactus_big7_moving = True
             elif random_cactus == 28:
                 big_cactus_2.move(constants.BIG_CACTUS_X, constants.TREX_Y)
                 array_big_cactus_1_1.move(constants.BIG_CACTUS_X + 9, constants.TREX_Y)
-                big_cactus_1.move(constants.BIG_CACTUS_X + 9, constants.TREX_Y)
+                big_cactus_1.move(constants.BIG_CACTUS_X + 18, constants.TREX_Y)
                 three_cactus_big8_moving = True
             elif random_cactus == 29:
                 array_small_cactus_1_2.move(constants.SMALL_CACTUS_X, constants.TREX_Y)
-                array_big_cactus_1_1.move(
+                array_small_cactus_1_1.move(
                     constants.SMALL_CACTUS_X + 6, constants.TREX_Y
                 )
-                small_cactus_1.move(constants.SMALL_CACTUS_X + 6, constants.TREX_Y)
+                small_cactus_1.move(constants.SMALL_CACTUS_X + 12, constants.TREX_Y)
                 three_cactus_small1_moving = True
             elif random_cactus == 30:
                 array_small_cactus_1_1.move(constants.SMALL_CACTUS_X, constants.TREX_Y)
                 small_cactus_2.move(constants.SMALL_CACTUS_X + 6, constants.TREX_Y)
-                small_cactus_1.move(constants.SMALL_CACTUS_X + 6, constants.TREX_Y)
+                small_cactus_1.move(constants.SMALL_CACTUS_X + 12, constants.TREX_Y)
                 three_cactus_small2_moving = True
             elif random_cactus == 31:
                 array_small_cactus_1_1.move(constants.SMALL_CACTUS_X, constants.TREX_Y)
                 small_cactus_1.move(constants.SMALL_CACTUS_X + 6, constants.TREX_Y)
-                small_cactus_2.move(constants.SMALL_CACTUS_X + 6, constants.TREX_Y)
+                small_cactus_2.move(constants.SMALL_CACTUS_X + 12, constants.TREX_Y)
                 three_cactus_small3_moving = True
             elif random_cactus == 32:
                 small_cactus_1.move(constants.SMALL_CACTUS_X, constants.TREX_Y)
                 array_small_cactus_2_1.move(
                     constants.SMALL_CACTUS_X + 6, constants.TREX_Y
                 )
-                small_cactus_2.move(constants.SMALL_CACTUS_X + 6, constants.TREX_Y)
+                small_cactus_2.move(constants.SMALL_CACTUS_X + 12, constants.TREX_Y)
                 three_cactus_small4_moving = True
             elif random_cactus == 33:
                 small_cactus_2.move(constants.SMALL_CACTUS_X, constants.TREX_Y)
                 array_small_cactus_1_1.move(
                     constants.SMALL_CACTUS_X + 6, constants.TREX_Y
                 )
-                small_cactus_1.move(constants.SMALL_CACTUS_X + 6, constants.TREX_Y)
+                small_cactus_1.move(constants.SMALL_CACTUS_X + 12, constants.TREX_Y)
                 three_cactus_small5_moving = True
             elif random_cactus == 34:
                 array_small_cactus_2_1.move(constants.SMALL_CACTUS_X, constants.TREX_Y)
                 small_cactus_2.move(constants.SMALL_CACTUS_X + 6, constants.TREX_Y)
-                small_cactus_1.move(constants.SMALL_CACTUS_X + 6, constants.TREX_Y)
+                small_cactus_1.move(constants.SMALL_CACTUS_X + 12, constants.TREX_Y)
                 three_cactus_small6_moving = True
             elif random_cactus == 35:
                 array_small_cactus_2_1.move(constants.SMALL_CACTUS_X, constants.TREX_Y)
                 small_cactus_1.move(constants.SMALL_CACTUS_X + 6, constants.TREX_Y)
-                small_cactus_2.move(constants.SMALL_CACTUS_X + 6, constants.TREX_Y)
+                small_cactus_2.move(constants.SMALL_CACTUS_X + 12, constants.TREX_Y)
                 three_cactus_small7_moving = True
             elif random_cactus == 36:
                 array_small_cactus_2_2.move(constants.SMALL_CACTUS_X, constants.TREX_Y)
                 array_small_cactus_2_1.move(
                     constants.SMALL_CACTUS_X + 6, constants.TREX_Y
                 )
-                small_cactus_2.move(constants.SMALL_CACTUS_X + 6, constants.TREX_Y)
+                small_cactus_2.move(constants.SMALL_CACTUS_X + 12, constants.TREX_Y)
                 three_cactus_small8_moving = True
         if big_cactus_1_moving == True:
             big_cactus_1.move(big_cactus_1.x - speed, constants.TREX_Y)

@@ -43,15 +43,15 @@ SMALL_CACTUS_X = 150
 JUMP_HEIGHT = 24
 
 
-#button state dictionary
+# button state dictionary
 button_state = {
     "button_up": "up",
     "button_just_pressed": "just pressed",
     "button_still_pressed": "still pressed",
-    "button_released": "released"
+    "button_released": "released",
 }
 
 RED_PALETTE = (
-    b'\xff\xff\x00\x22\xcey\x22\xff\xff\xff\xff\xff\xff\xff\xff\xff'
-    b'\xff\xff\xff\xff\xff\xff\xff\xff\xff\xff\xff\xff\xff\xff\xff\xff'
+    b"\xff\xff\x00\x22\xcey\x22\xff\xff\xff\xff\xff\xff\xff\xff\xff"
+    b"\xff\xff\xff\xff\xff\xff\xff\xff\xff\xff\xff\xff\xff\xff\xff\xff"
 )
