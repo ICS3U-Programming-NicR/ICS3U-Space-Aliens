@@ -3,11 +3,12 @@
 # Date: 03/25/2022
 # Description: CPT game EdgeBadge
 
+import time
+import random
+
 import constants
 import stage
 import ugame
-import time
-import random
 
 
 def gravity(

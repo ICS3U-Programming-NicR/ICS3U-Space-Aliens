@@ -1,9 +1,9 @@
 #!/usr/bin/env python3
- 
+
 # Created by: Nicolas Riscalas
 # Created on: June 2022
 # This is the constants file for CPT
- 
+
 # PyBadge screen size is 160 x 128
 # set the x max
 SCREEN_X = 160
@@ -41,15 +41,17 @@ BIG_CACTUS_X = 148
 SMALL_CACTUS_X = 150
 # set the jump height
 JUMP_HEIGHT = 24
- 
- 
+
+
 #button state dictionary
 button_state = {
-    "button_up" : "up",
-    "button_just_pressed" : "just pressed",
-    "button_still_pressed" : "still pressed",
-    "button_released" : "released"
+    "button_up": "up",
+    "button_just_pressed": "just pressed",
+    "button_still_pressed": "still pressed",
+    "button_released": "released"
 }
- 
-RED_PALETTE = (b'\xff\xff\x00\x22\xcey\x22\xff\xff\xff\xff\xff\xff\xff\xff\xff'
-                b'\xff\xff\xff\xff\xff\xff\xff\xff\xff\xff\xff\xff\xff\xff\xff\xff')
+
+RED_PALETTE = (
+    b'\xff\xff\x00\x22\xcey\x22\xff\xff\xff\xff\xff\xff\xff\xff\xff'
+    b'\xff\xff\xff\xff\xff\xff\xff\xff\xff\xff\xff\xff\xff\xff\xff\xff'
+)
