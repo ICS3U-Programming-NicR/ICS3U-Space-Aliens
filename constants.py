@@ -40,7 +40,10 @@ OFF_SCREEN_Y = -16
 BIG_CACTUS_X = 148
 SMALL_CACTUS_X = 150
 # set the jump height
-JUMP_HEIGHT = 24
+JUMP_HEIGHT = 36
+# set the trex's x
+TREX_X = 16
+
 
 
 # button state dictionary

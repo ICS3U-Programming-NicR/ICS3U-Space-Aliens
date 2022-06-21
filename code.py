@@ -11,6 +11,179 @@ import stage
 import ugame
 
 
+def move_cactus(
+    small_cactus_1,
+    small_cactus_2,
+    big_cactus_1,
+    big_cactus_2,
+    array_big_cactus_1_1,
+    array_big_cactus_1_2,
+    array_big_cactus_2_1,
+    array_big_cactus_2_2,
+    array_small_cactus_1_1,
+    array_small_cactus_1_2,
+    array_small_cactus_2_1,
+    array_small_cactus_2_2,
+    speed,
+    big_cactus_1_moving,
+    big_cactus_2_moving,
+    small_cactus_1_moving,
+    small_cactus_2_moving,
+    two_cactus_big1_moving,
+    two_cactus_big2_moving,
+    two_cactus_big3_moving,
+    two_cactus_big4_moving,
+    two_cactus_small1_moving,
+    two_cactus_small2_moving,
+    two_cactus_small3_moving,
+    two_cactus_small4_moving,
+    two_cactus_small_big1_moving,
+    two_cactus_small_big2_moving,
+    two_cactus_small_big3_moving,
+    two_cactus_small_big4_moving,
+    two_cactus_big_small1_moving,
+    two_cactus_big_small2_moving,
+    two_cactus_big_small3_moving,
+    two_cactus_big_small4_moving,
+    three_cactus_big1_moving,
+    three_cactus_big2_moving,
+    three_cactus_big3_moving,
+    three_cactus_big4_moving,
+    three_cactus_big5_moving,
+    three_cactus_big6_moving,
+    three_cactus_big7_moving,
+    three_cactus_big8_moving,
+    three_cactus_small1_moving,
+    three_cactus_small2_moving,
+    three_cactus_small3_moving,
+    three_cactus_small4_moving,
+    three_cactus_small5_moving,
+    three_cactus_small6_moving,
+    three_cactus_small7_moving,
+    three_cactus_small8_moving,
+):
+    if big_cactus_1_moving == True:
+        big_cactus_1.move(big_cactus_1.x - speed, constants.TREX_Y)
+    elif big_cactus_2_moving == True:
+        big_cactus_2.move(big_cactus_2.x - speed, constants.TREX_Y)
+    elif small_cactus_1_moving == True:
+        small_cactus_1.move(small_cactus_1.x - speed, constants.TREX_Y)
+    elif small_cactus_2_moving == True:
+        small_cactus_2.move(small_cactus_2.x - speed, constants.TREX_Y)
+    elif two_cactus_big1_moving == True:
+        big_cactus_1.move(big_cactus_1.x - speed, constants.TREX_Y)
+        big_cactus_2.move(big_cactus_2.x - speed, constants.TREX_Y)
+    elif two_cactus_big2_moving == True:
+        array_big_cactus_1_1.move(array_big_cactus_1_1.x - speed, constants.TREX_Y)
+        big_cactus_1.move(big_cactus_1.x - speed, constants.TREX_Y)
+    elif two_cactus_big3_moving == True:
+        big_cactus_2.move(big_cactus_2.x - speed, constants.TREX_Y)
+        big_cactus_1.move(big_cactus_1.x - speed, constants.TREX_Y)
+    elif two_cactus_big4_moving == True:
+        array_big_cactus_2_1.move(array_big_cactus_2_1.x - speed, constants.TREX_Y)
+        big_cactus_2.move(big_cactus_2.x - speed, constants.TREX_Y)
+    elif two_cactus_small1_moving == True:
+        array_small_cactus_1_1.move(array_small_cactus_1_1.x - speed, constants.TREX_Y)
+        small_cactus_1.move(small_cactus_1.x - speed, constants.TREX_Y)
+    elif two_cactus_small2_moving == True:
+        small_cactus_1.move(small_cactus_1.x - speed, constants.TREX_Y)
+        small_cactus_2.move(small_cactus_2.x - speed, constants.TREX_Y)
+    elif two_cactus_small3_moving == True:
+        small_cactus_2.move(small_cactus_2.x - speed, constants.TREX_Y)
+        small_cactus_1.move(small_cactus_1.x - speed, constants.TREX_Y)
+    elif two_cactus_small4_moving == True:
+        array_small_cactus_2_1.move(array_small_cactus_2_1.x - speed, constants.TREX_Y)
+        small_cactus_2.move(small_cactus_2.x - speed, constants.TREX_Y)
+    elif two_cactus_small_big1_moving == True:
+        small_cactus_1.move(small_cactus_1.x - speed, constants.TREX_Y)
+        big_cactus_1.move(big_cactus_1.x - speed, constants.TREX_Y)
+    elif two_cactus_small_big2_moving == True:
+        small_cactus_1.move(small_cactus_1.x - speed, constants.TREX_Y)
+        big_cactus_2.move(big_cactus_2.x - speed, constants.TREX_Y)
+    elif two_cactus_small_big3_moving == True:
+        small_cactus_2.move(small_cactus_2.x - speed, constants.TREX_Y)
+        big_cactus_1.move(big_cactus_1.x - speed, constants.TREX_Y)
+    elif two_cactus_small_big4_moving == True:
+        small_cactus_1.move(small_cactus_1.x - speed, constants.TREX_Y)
+        big_cactus_2.move(big_cactus_2.x - speed, constants.TREX_Y)
+    elif two_cactus_big_small1_moving == True:
+        big_cactus_1.move(big_cactus_1.x - speed, constants.TREX_Y)
+        small_cactus_1.move(small_cactus_1.x - speed, constants.TREX_Y)
+    elif two_cactus_big_small2_moving == True:
+        big_cactus_1.move(big_cactus_1.x - speed, constants.TREX_Y)
+        small_cactus_2.move(small_cactus_2.x - speed, constants.TREX_Y)
+    elif two_cactus_big_small3_moving == True:
+        big_cactus_2.move(big_cactus_2.x - speed, constants.TREX_Y)
+        small_cactus_1.move(small_cactus_1.x - speed, constants.TREX_Y)
+    elif two_cactus_big_small4_moving == True:
+        big_cactus_2.move(big_cactus_2.x - speed, constants.TREX_Y)
+        small_cactus_2.move(small_cactus_2.x - speed, constants.TREX_Y)
+    elif three_cactus_big1_moving == True:
+        array_big_cactus_1_2.move(array_big_cactus_1_2.x - speed, constants.TREX_Y)
+        array_big_cactus_1_1.move(array_big_cactus_1_1.x - speed, constants.TREX_Y)
+        big_cactus_1.move(big_cactus_1.x - speed, constants.TREX_Y)
+    elif three_cactus_big2_moving == True:
+        array_big_cactus_1_1.move(array_big_cactus_1_1.x - speed, constants.TREX_Y)
+        big_cactus_2.move(big_cactus_2.x - speed, constants.TREX_Y)
+        big_cactus_1.move(big_cactus_1.x - speed, constants.TREX_Y)
+    elif three_cactus_big3_moving == True:
+        array_big_cactus_1_1.move(array_big_cactus_1_1.x - speed, constants.TREX_Y)
+        big_cactus_2.move(big_cactus_2.x - speed, constants.TREX_Y)
+        big_cactus_1.move(big_cactus_1.x - speed, constants.TREX_Y)
+    elif three_cactus_big4_moving == True:
+        big_cactus_1.move(big_cactus_1.x - speed, constants.TREX_Y)
+        array_big_cactus_2_1.move(array_big_cactus_2_1.x - speed, constants.TREX_Y)
+        big_cactus_2.move(big_cactus_2.x - speed, constants.TREX_Y)
+    elif three_cactus_big5_moving == True:
+        array_big_cactus_2_2.move(array_big_cactus_2_2.x - speed, constants.TREX_Y)
+        array_big_cactus_2_1.move(array_big_cactus_2_1.x - speed, constants.TREX_Y)
+        big_cactus_2.move(big_cactus_2.x - speed, constants.TREX_Y)
+    elif three_cactus_big6_moving == True:
+        array_big_cactus_2_1.move(array_big_cactus_2_1.x - speed, constants.TREX_Y)
+        big_cactus_2.move(big_cactus_2.x - speed, constants.TREX_Y)
+        big_cactus_1.move(big_cactus_1.x - speed, constants.TREX_Y)
+    elif three_cactus_big7_moving == True:
+        array_big_cactus_2_1.move(array_big_cactus_2_1.x - speed, constants.TREX_Y)
+        big_cactus_1.move(big_cactus_1.x - speed, constants.TREX_Y)
+        big_cactus_2.move(big_cactus_2.x - speed, constants.TREX_Y)
+    elif three_cactus_big8_moving == True:
+        big_cactus_2.move(big_cactus_2.x - speed, constants.TREX_Y)
+        array_big_cactus_1_1.move(array_big_cactus_1_1.x - speed, constants.TREX_Y)
+        big_cactus_1.move(big_cactus_1.x - speed, constants.TREX_Y)
+    elif three_cactus_small1_moving == True:
+        array_small_cactus_1_2.move(array_small_cactus_1_2.x - speed, constants.TREX_Y)
+        array_small_cactus_1_1.move(array_small_cactus_1_1.x - speed, constants.TREX_Y)
+        small_cactus_1.move(small_cactus_1.x - speed, constants.TREX_Y)
+    elif three_cactus_small2_moving == True:
+        array_small_cactus_1_1.move(array_small_cactus_1_1.x - speed, constants.TREX_Y)
+        small_cactus_2.move(small_cactus_2.x - speed, constants.TREX_Y)
+        small_cactus_1.move(small_cactus_1.x - speed, constants.TREX_Y)
+    elif three_cactus_small3_moving == True:
+        array_small_cactus_1_1.move(array_small_cactus_1_1.x - speed, constants.TREX_Y)
+        small_cactus_1.move(small_cactus_1.x - speed, constants.TREX_Y)
+        small_cactus_2.move(small_cactus_2.x - speed, constants.TREX_Y)
+    elif three_cactus_small4_moving == True:
+        small_cactus_1.move(small_cactus_1.x - speed, constants.TREX_Y)
+        array_small_cactus_2_1.move(array_small_cactus_2_1.x - speed, constants.TREX_Y)
+        small_cactus_2.move(small_cactus_2.x - speed, constants.TREX_Y)
+    elif three_cactus_small5_moving == True:
+        small_cactus_2.move(small_cactus_2.x - speed, constants.TREX_Y)
+        array_small_cactus_1_1.move(array_big_cactus_1_1.x - speed, constants.TREX_Y)
+        small_cactus_1.move(small_cactus_1.x - speed, constants.TREX_Y)
+    elif three_cactus_small6_moving == True:
+        array_small_cactus_2_1.move(array_small_cactus_2_1.x - speed, constants.TREX_Y)
+        small_cactus_2.move(small_cactus_2.x - speed, constants.TREX_Y)
+        small_cactus_1.move(small_cactus_1.x - speed, constants.TREX_Y)
+    elif three_cactus_small7_moving == True:
+        array_small_cactus_2_1.move(array_small_cactus_2_1.x - speed, constants.TREX_Y)
+        small_cactus_1.move(small_cactus_1.x - speed, constants.TREX_Y)
+        small_cactus_2.move(small_cactus_2.x - speed, constants.TREX_Y)
+    elif three_cactus_small8_moving == True:
+        array_small_cactus_2_2.move(array_small_cactus_2_2.x - speed, constants.TREX_Y)
+        array_small_cactus_2_1.move(array_small_cactus_2_1.x - speed, constants.TREX_Y)
+        small_cactus_2.move(small_cactus_2.x - speed, constants.TREX_Y)
+
+
 def gravity(
     trex,
     game,
@@ -66,153 +239,106 @@ def gravity(
     three_cactus_small8_moving,
 ):
     while trex.y < constants.TREX_Y:
-        speed = speed + 0.0001
-        if big_cactus_1_moving == True:
-            big_cactus_1.move(big_cactus_1.x - speed, constants.TREX_Y)
-        elif big_cactus_2_moving == True:
-            big_cactus_2.move(big_cactus_2.x - speed, constants.TREX_Y)
-        elif small_cactus_1_moving == True:
-            small_cactus_1.move(small_cactus_1.x - speed, constants.TREX_Y)
-        elif small_cactus_2_moving == True:
-            small_cactus_2.move(small_cactus_2.x - speed, constants.TREX_Y)
-        elif two_cactus_big1_moving == True:
-            big_cactus_1.move(big_cactus_1.x - speed, constants.TREX_Y)
-            big_cactus_2.move(big_cactus_2.x - speed, constants.TREX_Y)
-        elif two_cactus_big2_moving == True:
-            array_big_cactus_1_1.move(array_big_cactus_1_1.x - speed, constants.TREX_Y)
-            big_cactus_1.move(big_cactus_1.x - speed, constants.TREX_Y)
-        elif two_cactus_big3_moving == True:
-            big_cactus_2.move(big_cactus_2.x - speed, constants.TREX_Y)
-            big_cactus_1.move(big_cactus_1.x - speed, constants.TREX_Y)
-        elif two_cactus_big4_moving == True:
-            array_big_cactus_2_1.move(array_big_cactus_2_1.x - speed, constants.TREX_Y)
-            big_cactus_2.move(big_cactus_2.x - speed, constants.TREX_Y)
-        elif two_cactus_small1_moving == True:
-            array_small_cactus_1_1.move(
-                array_small_cactus_1_1.x - speed, constants.TREX_Y
+        move_cactus(
+            small_cactus_1,
+            small_cactus_2,
+            big_cactus_1,
+            big_cactus_2,
+            array_big_cactus_1_1,
+            array_big_cactus_1_2,
+            array_big_cactus_2_1,
+            array_big_cactus_2_2,
+            array_small_cactus_1_1,
+            array_small_cactus_1_2,
+            array_small_cactus_2_1,
+            array_small_cactus_2_2,
+            speed,
+            big_cactus_1_moving,
+            big_cactus_2_moving,
+            small_cactus_1_moving,
+            small_cactus_2_moving,
+            two_cactus_big1_moving,
+            two_cactus_big2_moving,
+            two_cactus_big3_moving,
+            two_cactus_big4_moving,
+            two_cactus_small1_moving,
+            two_cactus_small2_moving,
+            two_cactus_small3_moving,
+            two_cactus_small4_moving,
+            two_cactus_small_big1_moving,
+            two_cactus_small_big2_moving,
+            two_cactus_small_big3_moving,
+            two_cactus_small_big4_moving,
+            two_cactus_big_small1_moving,
+            two_cactus_big_small2_moving,
+            two_cactus_big_small3_moving,
+            two_cactus_big_small4_moving,
+            three_cactus_big1_moving,
+            three_cactus_big2_moving,
+            three_cactus_big3_moving,
+            three_cactus_big4_moving,
+            three_cactus_big5_moving,
+            three_cactus_big6_moving,
+            three_cactus_big7_moving,
+            three_cactus_big8_moving,
+            three_cactus_small1_moving,
+            three_cactus_small2_moving,
+            three_cactus_small3_moving,
+            three_cactus_small4_moving,
+            three_cactus_small5_moving,
+            three_cactus_small6_moving,
+            three_cactus_small7_moving,
+            three_cactus_small8_moving,
+        )
+        if (
+            (
+                array_small_cactus_2_2.x <= trex.x + 8
+                and array_small_cactus_2_2.x >= trex.x - 8
+                and trex.y >= constants.TREX_Y - 7
             )
-            small_cactus_1.move(small_cactus_1.x - speed, constants.TREX_Y)
-        elif two_cactus_small2_moving == True:
-            small_cactus_1.move(small_cactus_1.x - speed, constants.TREX_Y)
-            small_cactus_2.move(small_cactus_2.x - speed, constants.TREX_Y)
-        elif two_cactus_small3_moving == True:
-            small_cactus_2.move(small_cactus_2.x - speed, constants.TREX_Y)
-            small_cactus_1.move(small_cactus_1.x - speed, constants.TREX_Y)
-        elif two_cactus_small4_moving == True:
-            array_small_cactus_2_1.move(
-                array_small_cactus_2_1.x - speed, constants.TREX_Y
+            or (
+                array_small_cactus_2_1.x <= trex.x + 8
+                and array_small_cactus_2_1.x >= trex.x - 8
+                and trex.y >= constants.TREX_Y - 7
             )
-            small_cactus_2.move(small_cactus_2.x - speed, constants.TREX_Y)
-        elif two_cactus_small_big1_moving == True:
-            small_cactus_1.move(small_cactus_1.x - speed, constants.TREX_Y)
-            big_cactus_1.move(big_cactus_1.x - speed, constants.TREX_Y)
-        elif two_cactus_small_big2_moving == True:
-            small_cactus_1.move(small_cactus_1.x - speed, constants.TREX_Y)
-            big_cactus_2.move(big_cactus_2.x - speed, constants.TREX_Y)
-        elif two_cactus_small_big3_moving == True:
-            small_cactus_2.move(small_cactus_2.x - speed, constants.TREX_Y)
-            big_cactus_1.move(big_cactus_1.x - speed, constants.TREX_Y)
-        elif two_cactus_small_big4_moving == True:
-            small_cactus_1.move(small_cactus_1.x - speed, constants.TREX_Y)
-            big_cactus_2.move(big_cactus_2.x - speed, constants.TREX_Y)
-        elif two_cactus_big_small1_moving == True:
-            big_cactus_1.move(big_cactus_1.x - speed, constants.TREX_Y)
-            small_cactus_1.move(small_cactus_1.x - speed, constants.TREX_Y)
-        elif two_cactus_big_small2_moving == True:
-            big_cactus_1.move(big_cactus_1.x - speed, constants.TREX_Y)
-            small_cactus_2.move(small_cactus_2.x - speed, constants.TREX_Y)
-        elif two_cactus_big_small3_moving == True:
-            big_cactus_2.move(big_cactus_2.x - speed, constants.TREX_Y)
-            small_cactus_1.move(small_cactus_1.x - speed, constants.TREX_Y)
-        elif two_cactus_big_small4_moving == True:
-            big_cactus_2.move(big_cactus_2.x - speed, constants.TREX_Y)
-            small_cactus_2.move(small_cactus_2.x - speed, constants.TREX_Y)
-        elif three_cactus_big1_moving == True:
-            array_big_cactus_1_2.move(array_big_cactus_1_2.x - speed, constants.TREX_Y)
-            array_big_cactus_1_1.move(array_big_cactus_1_1.x - speed, constants.TREX_Y)
-            big_cactus_1.move(big_cactus_1.x - speed, constants.TREX_Y)
-        elif three_cactus_big2_moving == True:
-            array_big_cactus_1_1.move(array_big_cactus_1_1.x - speed, constants.TREX_Y)
-            big_cactus_2.move(big_cactus_2.x - speed, constants.TREX_Y)
-            big_cactus_1.move(big_cactus_1.x - speed, constants.TREX_Y)
-        elif three_cactus_big3_moving == True:
-            array_big_cactus_1_1.move(array_big_cactus_1_1.x - speed, constants.TREX_Y)
-            big_cactus_2.move(big_cactus_2.x - speed, constants.TREX_Y)
-            big_cactus_1.move(big_cactus_1.x - speed, constants.TREX_Y)
-        elif three_cactus_big4_moving == True:
-            big_cactus_1.move(big_cactus_1.x - speed, constants.TREX_Y)
-            array_big_cactus_2_1.move(array_big_cactus_2_1.x - speed, constants.TREX_Y)
-            big_cactus_2.move(big_cactus_2.x - speed, constants.TREX_Y)
-        elif three_cactus_big5_moving == True:
-            array_big_cactus_2_2.move(array_big_cactus_2_2.x - speed, constants.TREX_Y)
-            array_big_cactus_2_1.move(array_big_cactus_2_1.x - speed, constants.TREX_Y)
-            big_cactus_2.move(big_cactus_2.x - speed, constants.TREX_Y)
-        elif three_cactus_big6_moving == True:
-            array_big_cactus_2_1.move(array_big_cactus_2_1.x - speed, constants.TREX_Y)
-            big_cactus_2.move(big_cactus_2.x - speed, constants.TREX_Y)
-            big_cactus_1.move(big_cactus_1.x - speed, constants.TREX_Y)
-        elif three_cactus_big7_moving == True:
-            array_big_cactus_2_1.move(array_big_cactus_2_1.x - speed, constants.TREX_Y)
-            big_cactus_1.move(big_cactus_1.x - speed, constants.TREX_Y)
-            big_cactus_2.move(big_cactus_2.x - speed, constants.TREX_Y)
-        elif three_cactus_big8_moving == True:
-            big_cactus_2.move(big_cactus_2.x - speed, constants.TREX_Y)
-            array_big_cactus_1_1.move(array_big_cactus_1_1.x - speed, constants.TREX_Y)
-            big_cactus_1.move(big_cactus_1.x - speed, constants.TREX_Y)
-        elif three_cactus_small1_moving == True:
-            array_small_cactus_1_2.move(
-                array_small_cactus_1_2.x - speed, constants.TREX_Y
+            or (small_cactus_2.x <= trex.x + 8 and small_cactus_2.x >= trex.x - 8 and trex.y >= constants.TREX_Y - 7)
+            or (
+                array_small_cactus_1_2.x <= trex.x + 8
+                and array_small_cactus_1_2.x >= trex.x - 8
+                and trex.y >= constants.TREX_Y - 7
             )
-            array_small_cactus_1_1.move(
-                array_small_cactus_1_1.x - speed, constants.TREX_Y
+            or (
+                array_small_cactus_1_1.x <= trex.x + 8
+                and array_small_cactus_1_1.x >= trex.x - 8
+                and trex.y >= constants.TREX_Y - 7
             )
-            small_cactus_1.move(small_cactus_1.x - speed, constants.TREX_Y)
-        elif three_cactus_small2_moving == True:
-            array_small_cactus_1_1.move(
-                array_small_cactus_1_1.x - speed, constants.TREX_Y
+            or (small_cactus_1.x <= trex.x + 8 and small_cactus_1.x >= trex.x - 8 and trex.y >= constants.TREX_Y - 7)
+            or (
+                array_big_cactus_2_2.x <= trex.x + 8
+                and array_big_cactus_2_2.x >= trex.x - 8
+                and trex.y >= constants.TREX_Y - 7
             )
-            small_cactus_2.move(small_cactus_2.x - speed, constants.TREX_Y)
-            small_cactus_1.move(small_cactus_1.x - speed, constants.TREX_Y)
-        elif three_cactus_small3_moving == True:
-            array_small_cactus_1_1.move(
-                array_small_cactus_1_1.x - speed, constants.TREX_Y
+            or (
+                array_big_cactus_2_1.x <= trex.x + 8
+                and array_big_cactus_2_1.x >= trex.x - 8
+                and trex.y >= constants.TREX_Y - 7
             )
-            small_cactus_1.move(small_cactus_1.x - speed, constants.TREX_Y)
-            small_cactus_2.move(small_cactus_2.x - speed, constants.TREX_Y)
-        elif three_cactus_small4_moving == True:
-            small_cactus_1.move(small_cactus_1.x - speed, constants.TREX_Y)
-            array_small_cactus_2_1.move(
-                array_small_cactus_2_1.x - speed, constants.TREX_Y
+            or (big_cactus_2.x <= trex.x + 8 and big_cactus_2.x >= trex.x - 8 and trex.y >= constants.TREX_Y - 16)
+            or (
+                array_big_cactus_1_2.x <= trex.x + 8
+                and array_big_cactus_1_2.x >= trex.x - 8
+                and trex.y >= constants.TREX_Y - 16
             )
-            small_cactus_2.move(small_cactus_2.x - speed, constants.TREX_Y)
-        elif three_cactus_small5_moving == True:
-            small_cactus_2.move(small_cactus_2.x - speed, constants.TREX_Y)
-            array_small_cactus_1_1.move(
-                array_big_cactus_1_1.x - speed, constants.TREX_Y
+            or (
+                array_big_cactus_1_1.x <= trex.x + 8
+                and array_big_cactus_1_1.x >= trex.x - 8
+                and trex.y >= constants.TREX_Y - 16
             )
-            small_cactus_1.move(small_cactus_1.x - speed, constants.TREX_Y)
-        elif three_cactus_small6_moving == True:
-            array_small_cactus_2_1.move(
-                array_small_cactus_2_1.x - speed, constants.TREX_Y
-            )
-            small_cactus_2.move(small_cactus_2.x - speed, constants.TREX_Y)
-            small_cactus_1.move(small_cactus_1.x - speed, constants.TREX_Y)
-        elif three_cactus_small7_moving == True:
-            array_small_cactus_2_1.move(
-                array_small_cactus_2_1.x - speed, constants.TREX_Y
-            )
-            small_cactus_1.move(small_cactus_1.x - speed, constants.TREX_Y)
-            small_cactus_2.move(small_cactus_2.x - speed, constants.TREX_Y)
-        elif three_cactus_small8_moving == True:
-            array_small_cactus_2_2.move(
-                array_small_cactus_2_2.x - speed, constants.TREX_Y
-            )
-            array_small_cactus_2_1.move(
-                array_small_cactus_2_1.x - speed, constants.TREX_Y
-            )
-            small_cactus_2.move(small_cactus_2.x - speed, constants.TREX_Y)
+            or (big_cactus_1.x <= trex.x + 8 and big_cactus_1.x >= trex.x - 8 and trex.y >= constants.TREX_Y - 16)
+        ):
+            pass
         clouds.move(clouds.x - 0.1, clouds.y)
-        trex.move(trex.x, trex.y + 1)
+        trex.move(trex.x, trex.y + (constants.JUMP_HEIGHT / constants.SPRITE_SIZE))
         game.render_sprites(
             [trex]
             + [clouds]
@@ -318,7 +444,7 @@ def menu_scene():
         image_bank_background, constants.SCREEN_GRID_X, constants.SCREEN_GRID_Y
     )
 
-    trex = stage.Sprite(image_bank_sprites, 4, 16, constants.TREX_Y)
+    trex = stage.Sprite(image_bank_sprites, 4, constants.TREX_X, constants.TREX_Y)
 
     floor = stage.Sprite(
         image_bank_sprites, 1, 0 * constants.SPRITE_SIZE, constants.FLOOR_Y
@@ -406,10 +532,12 @@ def menu_scene():
 
 
 def game_scene():
+    # set the starting speed
     speed = 2
+    # set the starting points
+    points = 0
     # boolean for checking if jump
     playsound = True
-    button_pressed = False
     big_cactus_1_moving = True
     big_cactus_2_moving = False
     small_cactus_1_moving = False
@@ -464,8 +592,18 @@ def game_scene():
     background = stage.Grid(
         image_bank_background, constants.SCREEN_GRID_X, constants.SCREEN_GRID_Y
     )
-
-    trex = stage.Sprite(image_bank_sprites, 4, 16, constants.TREX_Y)
+    # highpoints_num = stage.Text(
+    #     width=29, height=12, font=None, palette=constants.RED_PALETTE, buffer=None
+    # )
+    # # move it where I want it
+    # highpoints_num.move(32, 26)
+    # # open the highpoints
+    points_text = stage.Text(width=29, height=14)
+    points_text.clear()
+    points_text.cursor(0,0)
+    points_text.move(1,1)
+    points_text.text("points: {0}".format(points))
+    trex = stage.Sprite(image_bank_sprites, 4, constants.TREX_X, constants.TREX_Y)
     # create the floor
     floor = stage.Sprite(
         image_bank_sprites, 1, 0 * constants.SPRITE_SIZE, constants.FLOOR_Y
@@ -497,6 +635,7 @@ def game_scene():
     floor10 = stage.Sprite(
         image_bank_sprites, 1, (9 * constants.SPRITE_SIZE), constants.FLOOR_Y
     )
+    # set the complete floor
     complete_floor = (
         [floor]
         + [floor2]
@@ -509,8 +648,11 @@ def game_scene():
         + [floor9]
         + [floor10]
     )
+    # create the cloud sprite
     clouds = stage.Sprite(image_bank_sprites, 3, constants.CLOUDS_X, constants.CLOUDS_Y)
+    # create the star sprite
     stars = stage.Sprite(image_bank_sprites, 2, constants.CLOUDS_X, constants.STARS_Y)
+    # create all the different types of cacti
     big_cactus_1 = stage.Sprite(
         image_bank_sprites, 5, constants.BIG_CACTUS_X, constants.TREX_Y
     )
@@ -567,19 +709,29 @@ def game_scene():
         + [big_cactus_2]
         + [small_cactus_1]
         + [small_cactus_2]
+        + [points_text]
+        # + [highpoints_num]
         + [background]
     )
     # takes layers and shows them on the screen
     game.render_block()
     # this is the game loop so it is supposed to loop forever
     while True:
+        points = points + 1
+        points_text.clear()
+        points_text.cursor(0,0)
+        points_text.move(1,1)
+        points_text.text("Score: {}".format(points))
+        # incrementally increase the speed
         speed = speed + 0.0001
+        # if there is no cactus on screen then spawn another
         if (
             big_cactus_1.x <= -16
             and big_cactus_2.x <= -16
             and small_cactus_1.x <= -16
             and small_cactus_2.x <= -16
         ):
+            # stop the cacti from moving
             big_cactus_1_moving = False
             big_cactus_2_moving = False
             small_cactus_1_moving = False
@@ -617,7 +769,9 @@ def game_scene():
             three_cactus_small7_moving = False
             three_cactus_small8_moving = False
             # print("hello")
+            # select a random cactus to show
             random_cactus = random.randint(1, 36)
+            # check which one is chosen and spawn it to the beginning
             if random_cactus == 1:
                 big_cactus_1.move(constants.BIG_CACTUS_X, constants.TREX_Y)
                 big_cactus_1_moving = True
@@ -782,150 +936,59 @@ def game_scene():
                 )
                 small_cactus_2.move(constants.SMALL_CACTUS_X + 12, constants.TREX_Y)
                 three_cactus_small8_moving = True
-        if big_cactus_1_moving == True:
-            big_cactus_1.move(big_cactus_1.x - speed, constants.TREX_Y)
-        elif big_cactus_2_moving == True:
-            big_cactus_2.move(big_cactus_2.x - speed, constants.TREX_Y)
-        elif small_cactus_1_moving == True:
-            small_cactus_1.move(small_cactus_1.x - speed, constants.TREX_Y)
-        elif small_cactus_2_moving == True:
-            small_cactus_2.move(small_cactus_2.x - speed, constants.TREX_Y)
-        elif two_cactus_big1_moving == True:
-            big_cactus_1.move(big_cactus_1.x - speed, constants.TREX_Y)
-            big_cactus_2.move(big_cactus_2.x - speed, constants.TREX_Y)
-        elif two_cactus_big2_moving == True:
-            array_big_cactus_1_1.move(array_big_cactus_1_1.x - speed, constants.TREX_Y)
-            big_cactus_1.move(big_cactus_1.x - speed, constants.TREX_Y)
-        elif two_cactus_big3_moving == True:
-            big_cactus_2.move(big_cactus_2.x - speed, constants.TREX_Y)
-            big_cactus_1.move(big_cactus_1.x - speed, constants.TREX_Y)
-        elif two_cactus_big4_moving == True:
-            array_big_cactus_2_1.move(array_big_cactus_2_1.x - speed, constants.TREX_Y)
-            big_cactus_2.move(big_cactus_2.x - speed, constants.TREX_Y)
-        elif two_cactus_small1_moving == True:
-            array_small_cactus_1_1.move(
-                array_small_cactus_1_1.x - speed, constants.TREX_Y
-            )
-            small_cactus_1.move(small_cactus_1.x - speed, constants.TREX_Y)
-        elif two_cactus_small2_moving == True:
-            small_cactus_1.move(small_cactus_1.x - speed, constants.TREX_Y)
-            small_cactus_2.move(small_cactus_2.x - speed, constants.TREX_Y)
-        elif two_cactus_small3_moving == True:
-            small_cactus_2.move(small_cactus_2.x - speed, constants.TREX_Y)
-            small_cactus_1.move(small_cactus_1.x - speed, constants.TREX_Y)
-        elif two_cactus_small4_moving == True:
-            array_small_cactus_2_1.move(
-                array_small_cactus_2_1.x - speed, constants.TREX_Y
-            )
-            small_cactus_2.move(small_cactus_2.x - speed, constants.TREX_Y)
-        elif two_cactus_small_big1_moving == True:
-            small_cactus_1.move(small_cactus_1.x - speed, constants.TREX_Y)
-            big_cactus_1.move(big_cactus_1.x - speed, constants.TREX_Y)
-        elif two_cactus_small_big2_moving == True:
-            small_cactus_1.move(small_cactus_1.x - speed, constants.TREX_Y)
-            big_cactus_2.move(big_cactus_2.x - speed, constants.TREX_Y)
-        elif two_cactus_small_big3_moving == True:
-            small_cactus_2.move(small_cactus_2.x - speed, constants.TREX_Y)
-            big_cactus_1.move(big_cactus_1.x - speed, constants.TREX_Y)
-        elif two_cactus_small_big4_moving == True:
-            small_cactus_1.move(small_cactus_1.x - speed, constants.TREX_Y)
-            big_cactus_2.move(big_cactus_2.x - speed, constants.TREX_Y)
-        elif two_cactus_big_small1_moving == True:
-            big_cactus_1.move(big_cactus_1.x - speed, constants.TREX_Y)
-            small_cactus_1.move(small_cactus_1.x - speed, constants.TREX_Y)
-        elif two_cactus_big_small2_moving == True:
-            big_cactus_1.move(big_cactus_1.x - speed, constants.TREX_Y)
-            small_cactus_2.move(small_cactus_2.x - speed, constants.TREX_Y)
-        elif two_cactus_big_small3_moving == True:
-            big_cactus_2.move(big_cactus_2.x - speed, constants.TREX_Y)
-            small_cactus_1.move(small_cactus_1.x - speed, constants.TREX_Y)
-        elif two_cactus_big_small4_moving == True:
-            big_cactus_2.move(big_cactus_2.x - speed, constants.TREX_Y)
-            small_cactus_2.move(small_cactus_2.x - speed, constants.TREX_Y)
-        elif three_cactus_big1_moving == True:
-            array_big_cactus_1_2.move(array_big_cactus_1_2.x - speed, constants.TREX_Y)
-            array_big_cactus_1_1.move(array_big_cactus_1_1.x - speed, constants.TREX_Y)
-            big_cactus_1.move(big_cactus_1.x - speed, constants.TREX_Y)
-        elif three_cactus_big2_moving == True:
-            array_big_cactus_1_1.move(array_big_cactus_1_1.x - speed, constants.TREX_Y)
-            big_cactus_2.move(big_cactus_2.x - speed, constants.TREX_Y)
-            big_cactus_1.move(big_cactus_1.x - speed, constants.TREX_Y)
-        elif three_cactus_big3_moving == True:
-            array_big_cactus_1_1.move(array_big_cactus_1_1.x - speed, constants.TREX_Y)
-            big_cactus_2.move(big_cactus_2.x - speed, constants.TREX_Y)
-            big_cactus_1.move(big_cactus_1.x - speed, constants.TREX_Y)
-        elif three_cactus_big4_moving == True:
-            big_cactus_1.move(big_cactus_1.x - speed, constants.TREX_Y)
-            array_big_cactus_2_1.move(array_big_cactus_2_1.x - speed, constants.TREX_Y)
-            big_cactus_2.move(big_cactus_2.x - speed, constants.TREX_Y)
-        elif three_cactus_big5_moving == True:
-            array_big_cactus_2_2.move(array_big_cactus_2_2.x - speed, constants.TREX_Y)
-            array_big_cactus_2_1.move(array_big_cactus_2_1.x - speed, constants.TREX_Y)
-            big_cactus_2.move(big_cactus_2.x - speed, constants.TREX_Y)
-        elif three_cactus_big6_moving == True:
-            array_big_cactus_2_1.move(array_big_cactus_2_1.x - speed, constants.TREX_Y)
-            big_cactus_2.move(big_cactus_2.x - speed, constants.TREX_Y)
-            big_cactus_1.move(big_cactus_1.x - speed, constants.TREX_Y)
-        elif three_cactus_big7_moving == True:
-            array_big_cactus_2_1.move(array_big_cactus_2_1.x - speed, constants.TREX_Y)
-            big_cactus_1.move(big_cactus_1.x - speed, constants.TREX_Y)
-            big_cactus_2.move(big_cactus_2.x - speed, constants.TREX_Y)
-        elif three_cactus_big8_moving == True:
-            big_cactus_2.move(big_cactus_2.x - speed, constants.TREX_Y)
-            array_big_cactus_1_1.move(array_big_cactus_1_1.x - speed, constants.TREX_Y)
-            big_cactus_1.move(big_cactus_1.x - speed, constants.TREX_Y)
-        elif three_cactus_small1_moving == True:
-            array_small_cactus_1_2.move(
-                array_small_cactus_1_2.x - speed, constants.TREX_Y
-            )
-            array_small_cactus_1_1.move(
-                array_small_cactus_1_1.x - speed, constants.TREX_Y
-            )
-            small_cactus_1.move(small_cactus_1.x - speed, constants.TREX_Y)
-        elif three_cactus_small2_moving == True:
-            array_small_cactus_1_1.move(
-                array_small_cactus_1_1.x - speed, constants.TREX_Y
-            )
-            small_cactus_2.move(small_cactus_2.x - speed, constants.TREX_Y)
-            small_cactus_1.move(small_cactus_1.x - speed, constants.TREX_Y)
-        elif three_cactus_small3_moving == True:
-            array_small_cactus_1_1.move(
-                array_small_cactus_1_1.x - speed, constants.TREX_Y
-            )
-            small_cactus_1.move(small_cactus_1.x - speed, constants.TREX_Y)
-            small_cactus_2.move(small_cactus_2.x - speed, constants.TREX_Y)
-        elif three_cactus_small4_moving == True:
-            small_cactus_1.move(small_cactus_1.x - speed, constants.TREX_Y)
-            array_small_cactus_2_1.move(
-                array_small_cactus_2_1.x - speed, constants.TREX_Y
-            )
-            small_cactus_2.move(small_cactus_2.x - speed, constants.TREX_Y)
-        elif three_cactus_small5_moving == True:
-            small_cactus_2.move(small_cactus_2.x - speed, constants.TREX_Y)
-            array_small_cactus_1_1.move(
-                array_big_cactus_1_1.x - speed, constants.TREX_Y
-            )
-            small_cactus_1.move(small_cactus_1.x - speed, constants.TREX_Y)
-        elif three_cactus_small6_moving == True:
-            array_small_cactus_2_1.move(
-                array_small_cactus_2_1.x - speed, constants.TREX_Y
-            )
-            small_cactus_2.move(small_cactus_2.x - speed, constants.TREX_Y)
-            small_cactus_1.move(small_cactus_1.x - speed, constants.TREX_Y)
-        elif three_cactus_small7_moving == True:
-            array_small_cactus_2_1.move(
-                array_small_cactus_2_1.x - speed, constants.TREX_Y
-            )
-            small_cactus_1.move(small_cactus_1.x - speed, constants.TREX_Y)
-            small_cactus_2.move(small_cactus_2.x - speed, constants.TREX_Y)
-        elif three_cactus_small8_moving == True:
-            array_small_cactus_2_2.move(
-                array_small_cactus_2_2.x - speed, constants.TREX_Y
-            )
-            array_small_cactus_2_1.move(
-                array_small_cactus_2_1.x - speed, constants.TREX_Y
-            )
-            small_cactus_2.move(small_cactus_2.x - speed, constants.TREX_Y)
+        # check which one is spawned and move it at the speed of speed
+        move_cactus(
+            small_cactus_1,
+            small_cactus_2,
+            big_cactus_1,
+            big_cactus_2,
+            array_big_cactus_1_1,
+            array_big_cactus_1_2,
+            array_big_cactus_2_1,
+            array_big_cactus_2_2,
+            array_small_cactus_1_1,
+            array_small_cactus_1_2,
+            array_small_cactus_2_1,
+            array_small_cactus_2_2,
+            speed,
+            big_cactus_1_moving,
+            big_cactus_2_moving,
+            small_cactus_1_moving,
+            small_cactus_2_moving,
+            two_cactus_big1_moving,
+            two_cactus_big2_moving,
+            two_cactus_big3_moving,
+            two_cactus_big4_moving,
+            two_cactus_small1_moving,
+            two_cactus_small2_moving,
+            two_cactus_small3_moving,
+            two_cactus_small4_moving,
+            two_cactus_small_big1_moving,
+            two_cactus_small_big2_moving,
+            two_cactus_small_big3_moving,
+            two_cactus_small_big4_moving,
+            two_cactus_big_small1_moving,
+            two_cactus_big_small2_moving,
+            two_cactus_big_small3_moving,
+            two_cactus_big_small4_moving,
+            three_cactus_big1_moving,
+            three_cactus_big2_moving,
+            three_cactus_big3_moving,
+            three_cactus_big4_moving,
+            three_cactus_big5_moving,
+            three_cactus_big6_moving,
+            three_cactus_big7_moving,
+            three_cactus_big8_moving,
+            three_cactus_small1_moving,
+            three_cactus_small2_moving,
+            three_cactus_small3_moving,
+            three_cactus_small4_moving,
+            three_cactus_small5_moving,
+            three_cactus_small6_moving,
+            three_cactus_small7_moving,
+            three_cactus_small8_moving,
+        )
+
         # move the clouds
         if clouds.x > 0 - constants.SPRITE_SIZE:
             clouds.move(clouds.x - 0.1, clouds.y)
@@ -945,176 +1008,113 @@ def game_scene():
                 up_button = constants.button_state["button_still_pressed"]
                 # makes the trex jump
                 while trex.y != (constants.TREX_Y - constants.JUMP_HEIGHT):
+                    # while the trex is in the air keep on moving the clouds and the cacti
                     clouds.move(clouds.x - 0.1, clouds.y)
-                    speed = speed + 0.0001
-                    if big_cactus_1_moving == True:
-                        big_cactus_1.move(big_cactus_1.x - speed, constants.TREX_Y)
-                    elif big_cactus_2_moving == True:
-                        big_cactus_2.move(big_cactus_2.x - speed, constants.TREX_Y)
-                    elif small_cactus_1_moving == True:
-                        small_cactus_1.move(small_cactus_1.x - speed, constants.TREX_Y)
-                    elif small_cactus_2_moving == True:
-                        small_cactus_2.move(small_cactus_2.x - speed, constants.TREX_Y)
-                    elif two_cactus_big1_moving == True:
-                        big_cactus_1.move(big_cactus_1.x - speed, constants.TREX_Y)
-                        big_cactus_2.move(big_cactus_2.x - speed, constants.TREX_Y)
-                    elif two_cactus_big2_moving == True:
-                        array_big_cactus_1_1.move(
-                            array_big_cactus_1_1.x - speed, constants.TREX_Y
+                    move_cactus(
+                        small_cactus_1,
+                        small_cactus_2,
+                        big_cactus_1,
+                        big_cactus_2,
+                        array_big_cactus_1_1,
+                        array_big_cactus_1_2,
+                        array_big_cactus_2_1,
+                        array_big_cactus_2_2,
+                        array_small_cactus_1_1,
+                        array_small_cactus_1_2,
+                        array_small_cactus_2_1,
+                        array_small_cactus_2_2,
+                        speed,
+                        big_cactus_1_moving,
+                        big_cactus_2_moving,
+                        small_cactus_1_moving,
+                        small_cactus_2_moving,
+                        two_cactus_big1_moving,
+                        two_cactus_big2_moving,
+                        two_cactus_big3_moving,
+                        two_cactus_big4_moving,
+                        two_cactus_small1_moving,
+                        two_cactus_small2_moving,
+                        two_cactus_small3_moving,
+                        two_cactus_small4_moving,
+                        two_cactus_small_big1_moving,
+                        two_cactus_small_big2_moving,
+                        two_cactus_small_big3_moving,
+                        two_cactus_small_big4_moving,
+                        two_cactus_big_small1_moving,
+                        two_cactus_big_small2_moving,
+                        two_cactus_big_small3_moving,
+                        two_cactus_big_small4_moving,
+                        three_cactus_big1_moving,
+                        three_cactus_big2_moving,
+                        three_cactus_big3_moving,
+                        three_cactus_big4_moving,
+                        three_cactus_big5_moving,
+                        three_cactus_big6_moving,
+                        three_cactus_big7_moving,
+                        three_cactus_big8_moving,
+                        three_cactus_small1_moving,
+                        three_cactus_small2_moving,
+                        three_cactus_small3_moving,
+                        three_cactus_small4_moving,
+                        three_cactus_small5_moving,
+                        three_cactus_small6_moving,
+                        three_cactus_small7_moving,
+                        three_cactus_small8_moving,
+                    )
+                    if (
+                        (
+                            array_small_cactus_2_2.x <= trex.x + 8
+                            and array_small_cactus_2_2.x >= trex.x - 8
+                            and trex.y >= constants.TREX_Y - 7
                         )
-                        big_cactus_1.move(big_cactus_1.x - speed, constants.TREX_Y)
-                    elif two_cactus_big3_moving == True:
-                        big_cactus_2.move(big_cactus_2.x - speed, constants.TREX_Y)
-                        big_cactus_1.move(big_cactus_1.x - speed, constants.TREX_Y)
-                    elif two_cactus_big4_moving == True:
-                        array_big_cactus_2_1.move(
-                            array_big_cactus_2_1.x - speed, constants.TREX_Y
+                        or (
+                            array_small_cactus_2_1.x <= trex.x + 8
+                            and array_small_cactus_2_1.x >= trex.x - 8
+                            and trex.y >= constants.TREX_Y - 7
                         )
-                        big_cactus_2.move(big_cactus_2.x - speed, constants.TREX_Y)
-                    elif two_cactus_small1_moving == True:
-                        array_small_cactus_1_1.move(
-                            array_small_cactus_1_1.x - speed, constants.TREX_Y
+                        or (small_cactus_2.x <= trex.x + 8 and small_cactus_2.x >= trex.x - 8 and trex.y >= constants.TREX_Y - 7)
+                        or (
+                            array_small_cactus_1_2.x <= trex.x + 8
+                            and array_small_cactus_1_2.x >= trex.x - 8
+                            and trex.y >= constants.TREX_Y - 7
                         )
-                        small_cactus_1.move(small_cactus_1.x - speed, constants.TREX_Y)
-                    elif two_cactus_small2_moving == True:
-                        small_cactus_1.move(small_cactus_1.x - speed, constants.TREX_Y)
-                        small_cactus_2.move(small_cactus_2.x - speed, constants.TREX_Y)
-                    elif two_cactus_small3_moving == True:
-                        small_cactus_2.move(small_cactus_2.x - speed, constants.TREX_Y)
-                        small_cactus_1.move(small_cactus_1.x - speed, constants.TREX_Y)
-                    elif two_cactus_small4_moving == True:
-                        array_small_cactus_2_1.move(
-                            array_small_cactus_2_1.x - speed, constants.TREX_Y
+                        or (
+                            array_small_cactus_1_1.x <= trex.x + 8
+                            and array_small_cactus_1_1.x >= trex.x - 8
+                            and trex.y >= constants.TREX_Y - 7
                         )
-                        small_cactus_2.move(small_cactus_2.x - speed, constants.TREX_Y)
-                    elif two_cactus_small_big1_moving == True:
-                        small_cactus_1.move(small_cactus_1.x - speed, constants.TREX_Y)
-                        big_cactus_1.move(big_cactus_1.x - speed, constants.TREX_Y)
-                    elif two_cactus_small_big2_moving == True:
-                        small_cactus_1.move(small_cactus_1.x - speed, constants.TREX_Y)
-                        big_cactus_2.move(big_cactus_2.x - speed, constants.TREX_Y)
-                    elif two_cactus_small_big3_moving == True:
-                        small_cactus_2.move(small_cactus_2.x - speed, constants.TREX_Y)
-                        big_cactus_1.move(big_cactus_1.x - speed, constants.TREX_Y)
-                    elif two_cactus_small_big4_moving == True:
-                        small_cactus_1.move(small_cactus_1.x - speed, constants.TREX_Y)
-                        big_cactus_2.move(big_cactus_2.x - speed, constants.TREX_Y)
-                    elif two_cactus_big_small1_moving == True:
-                        big_cactus_1.move(big_cactus_1.x - speed, constants.TREX_Y)
-                        small_cactus_1.move(small_cactus_1.x - speed, constants.TREX_Y)
-                    elif two_cactus_big_small2_moving == True:
-                        big_cactus_1.move(big_cactus_1.x - speed, constants.TREX_Y)
-                        small_cactus_2.move(small_cactus_2.x - speed, constants.TREX_Y)
-                    elif two_cactus_big_small3_moving == True:
-                        big_cactus_2.move(big_cactus_2.x - speed, constants.TREX_Y)
-                        small_cactus_1.move(small_cactus_1.x - speed, constants.TREX_Y)
-                    elif two_cactus_big_small4_moving == True:
-                        big_cactus_2.move(big_cactus_2.x - speed, constants.TREX_Y)
-                        small_cactus_2.move(small_cactus_2.x - speed, constants.TREX_Y)
-                    elif three_cactus_big1_moving == True:
-                        array_big_cactus_1_2.move(
-                            array_big_cactus_1_2.x - speed, constants.TREX_Y
+                        or (small_cactus_1.x <= trex.x + 8 and small_cactus_1.x >= trex.x - 8 and trex.y >= constants.TREX_Y - 7)
+                        or (
+                            array_big_cactus_2_2.x <= trex.x + 8
+                            and array_big_cactus_2_2.x >= trex.x - 8
+                            and trex.y >= constants.TREX_Y - 7
                         )
-                        array_big_cactus_1_1.move(
-                            array_big_cactus_1_1.x - speed, constants.TREX_Y
+                        or (
+                            array_big_cactus_2_1.x <= trex.x + 8
+                            and array_big_cactus_2_1.x >= trex.x - 8
+                            and trex.y >= constants.TREX_Y - 7
                         )
-                        big_cactus_1.move(big_cactus_1.x - speed, constants.TREX_Y)
-                    elif three_cactus_big2_moving == True:
-                        array_big_cactus_1_1.move(
-                            array_big_cactus_1_1.x - speed, constants.TREX_Y
+                        or (big_cactus_2.x <= trex.x + 8 and big_cactus_2.x >= trex.x - 8 and trex.y >= constants.TREX_Y - 16)
+                        or (
+                            array_big_cactus_1_2.x <= trex.x + 8
+                            and array_big_cactus_1_2.x >= trex.x - 8
+                            and trex.y >= constants.TREX_Y - 16
                         )
-                        big_cactus_2.move(big_cactus_2.x - speed, constants.TREX_Y)
-                        big_cactus_1.move(big_cactus_1.x - speed, constants.TREX_Y)
-                    elif three_cactus_big3_moving == True:
-                        array_big_cactus_1_1.move(
-                            array_big_cactus_1_1.x - speed, constants.TREX_Y
+                        or (
+                            array_big_cactus_1_1.x <= trex.x + 8
+                            and array_big_cactus_1_1.x >= trex.x - 8
+                            and trex.y >= constants.TREX_Y - 16
                         )
-                        big_cactus_2.move(big_cactus_2.x - speed, constants.TREX_Y)
-                        big_cactus_1.move(big_cactus_1.x - speed, constants.TREX_Y)
-                    elif three_cactus_big4_moving == True:
-                        big_cactus_1.move(big_cactus_1.x - speed, constants.TREX_Y)
-                        array_big_cactus_2_1.move(
-                            array_big_cactus_2_1.x - speed, constants.TREX_Y
-                        )
-                        big_cactus_2.move(big_cactus_2.x - speed, constants.TREX_Y)
-                    elif three_cactus_big5_moving == True:
-                        array_big_cactus_2_2.move(
-                            array_big_cactus_2_2.x - speed, constants.TREX_Y
-                        )
-                        array_big_cactus_2_1.move(
-                            array_big_cactus_2_1.x - speed, constants.TREX_Y
-                        )
-                        big_cactus_2.move(big_cactus_2.x - speed, constants.TREX_Y)
-                    elif three_cactus_big6_moving == True:
-                        array_big_cactus_2_1.move(
-                            array_big_cactus_2_1.x - speed, constants.TREX_Y
-                        )
-                        big_cactus_2.move(big_cactus_2.x - speed, constants.TREX_Y)
-                        big_cactus_1.move(big_cactus_1.x - speed, constants.TREX_Y)
-                    elif three_cactus_big7_moving == True:
-                        array_big_cactus_2_1.move(
-                            array_big_cactus_2_1.x - speed, constants.TREX_Y
-                        )
-                        big_cactus_1.move(big_cactus_1.x - speed, constants.TREX_Y)
-                        big_cactus_2.move(big_cactus_2.x - speed, constants.TREX_Y)
-                    elif three_cactus_big8_moving == True:
-                        big_cactus_2.move(big_cactus_2.x - speed, constants.TREX_Y)
-                        array_big_cactus_1_1.move(
-                            array_big_cactus_1_1.x - speed, constants.TREX_Y
-                        )
-                        big_cactus_1.move(big_cactus_1.x - speed, constants.TREX_Y)
-                    elif three_cactus_small1_moving == True:
-                        array_small_cactus_1_2.move(
-                            array_small_cactus_1_2.x - speed, constants.TREX_Y
-                        )
-                        array_small_cactus_1_1.move(
-                            array_small_cactus_1_1.x - speed, constants.TREX_Y
-                        )
-                        small_cactus_1.move(small_cactus_1.x - speed, constants.TREX_Y)
-                    elif three_cactus_small2_moving == True:
-                        array_small_cactus_1_1.move(
-                            array_small_cactus_1_1.x - speed, constants.TREX_Y
-                        )
-                        small_cactus_2.move(small_cactus_2.x - speed, constants.TREX_Y)
-                        small_cactus_1.move(small_cactus_1.x - speed, constants.TREX_Y)
-                    elif three_cactus_small3_moving == True:
-                        array_small_cactus_1_1.move(
-                            array_small_cactus_1_1.x - speed, constants.TREX_Y
-                        )
-                        small_cactus_1.move(small_cactus_1.x - speed, constants.TREX_Y)
-                        small_cactus_2.move(small_cactus_2.x - speed, constants.TREX_Y)
-                    elif three_cactus_small4_moving == True:
-                        small_cactus_1.move(small_cactus_1.x - speed, constants.TREX_Y)
-                        array_small_cactus_2_1.move(
-                            array_small_cactus_2_1.x - speed, constants.TREX_Y
-                        )
-                        small_cactus_2.move(small_cactus_2.x - speed, constants.TREX_Y)
-                    elif three_cactus_small5_moving == True:
-                        small_cactus_2.move(small_cactus_2.x - speed, constants.TREX_Y)
-                        array_small_cactus_1_1.move(
-                            array_big_cactus_1_1.x - speed, constants.TREX_Y
-                        )
-                        small_cactus_1.move(small_cactus_1.x - speed, constants.TREX_Y)
-                    elif three_cactus_small6_moving == True:
-                        array_small_cactus_2_1.move(
-                            array_small_cactus_2_1.x - speed, constants.TREX_Y
-                        )
-                        small_cactus_2.move(small_cactus_2.x - speed, constants.TREX_Y)
-                        small_cactus_1.move(small_cactus_1.x - speed, constants.TREX_Y)
-                    elif three_cactus_small7_moving == True:
-                        array_small_cactus_2_1.move(
-                            array_small_cactus_2_1.x - speed, constants.TREX_Y
-                        )
-                        small_cactus_1.move(small_cactus_1.x - speed, constants.TREX_Y)
-                        small_cactus_2.move(small_cactus_2.x - speed, constants.TREX_Y)
-                    elif three_cactus_small8_moving == True:
-                        array_small_cactus_2_2.move(
-                            array_small_cactus_2_2.x - speed, constants.TREX_Y
-                        )
-                        array_small_cactus_2_1.move(
-                            array_small_cactus_2_1.x - speed, constants.TREX_Y
-                        )
-                        small_cactus_2.move(small_cactus_2.x - speed, constants.TREX_Y)
+                        or (big_cactus_1.x <= trex.x + 8 and big_cactus_1.x >= trex.x - 8 and trex.y >= constants.TREX_Y - 16)
+                    ):
+                        pass
+                    else:
+                        points = points + 1
+                        points_text.clear()
+                        points_text.cursor(0,0)
+                        points_text.move(1,1)
+                        points_text.text("Score: {}".format(points))
+
                     trex.move(
                         trex.x, trex.y - (constants.JUMP_HEIGHT / constants.SPRITE_SIZE)
                     )
@@ -1135,7 +1135,6 @@ def game_scene():
                         + [array_small_cactus_2_2]
                     )
                     game.tick()
-                    button_pressed = True
             else:
                 if up_button == constants.button_state["button_still_pressed"]:
                     up_button = constants.button_state["button_released"]
@@ -1159,180 +1158,112 @@ def game_scene():
                 up_button = constants.button_state["button_still_pressed"]
                 # makes the trex jump
                 while trex.y != (constants.TREX_Y - constants.JUMP_HEIGHT):
-                    speed = speed + 0.0001
-                    if big_cactus_1_moving == True:
-                        big_cactus_1.move(big_cactus_1.x - speed, constants.TREX_Y)
-                    elif big_cactus_2_moving == True:
-                        big_cactus_2.move(big_cactus_2.x - speed, constants.TREX_Y)
-                    elif small_cactus_1_moving == True:
-                        small_cactus_1.move(small_cactus_1.x - speed, constants.TREX_Y)
-                    elif small_cactus_2_moving == True:
-                        small_cactus_2.move(small_cactus_2.x - speed, constants.TREX_Y)
-                    elif two_cactus_big1_moving == True:
-                        big_cactus_1.move(big_cactus_1.x - speed, constants.TREX_Y)
-                        big_cactus_2.move(big_cactus_2.x - speed, constants.TREX_Y)
-                    elif two_cactus_big2_moving == True:
-                        array_big_cactus_1_1.move(
-                            array_big_cactus_1_1.x - speed, constants.TREX_Y
+                    # while the trex is in the air keep on moving the clouds and the cactus
+                    move_cactus(
+                        small_cactus_1,
+                        small_cactus_2,
+                        big_cactus_1,
+                        big_cactus_2,
+                        array_big_cactus_1_1,
+                        array_big_cactus_1_2,
+                        array_big_cactus_2_1,
+                        array_big_cactus_2_2,
+                        array_small_cactus_1_1,
+                        array_small_cactus_1_2,
+                        array_small_cactus_2_1,
+                        array_small_cactus_2_2,
+                        speed,
+                        big_cactus_1_moving,
+                        big_cactus_2_moving,
+                        small_cactus_1_moving,
+                        small_cactus_2_moving,
+                        two_cactus_big1_moving,
+                        two_cactus_big2_moving,
+                        two_cactus_big3_moving,
+                        two_cactus_big4_moving,
+                        two_cactus_small1_moving,
+                        two_cactus_small2_moving,
+                        two_cactus_small3_moving,
+                        two_cactus_small4_moving,
+                        two_cactus_small_big1_moving,
+                        two_cactus_small_big2_moving,
+                        two_cactus_small_big3_moving,
+                        two_cactus_small_big4_moving,
+                        two_cactus_big_small1_moving,
+                        two_cactus_big_small2_moving,
+                        two_cactus_big_small3_moving,
+                        two_cactus_big_small4_moving,
+                        three_cactus_big1_moving,
+                        three_cactus_big2_moving,
+                        three_cactus_big3_moving,
+                        three_cactus_big4_moving,
+                        three_cactus_big5_moving,
+                        three_cactus_big6_moving,
+                        three_cactus_big7_moving,
+                        three_cactus_big8_moving,
+                        three_cactus_small1_moving,
+                        three_cactus_small2_moving,
+                        three_cactus_small3_moving,
+                        three_cactus_small4_moving,
+                        three_cactus_small5_moving,
+                        three_cactus_small6_moving,
+                        three_cactus_small7_moving,
+                        three_cactus_small8_moving,
+                    )
+                    if (
+                        (
+                            array_small_cactus_2_2.x <= trex.x + 8
+                            and array_small_cactus_2_2.x >= trex.x - 8
+                            and trex.y >= constants.TREX_Y - 7
                         )
-                        big_cactus_1.move(big_cactus_1.x - speed, constants.TREX_Y)
-                    elif two_cactus_big3_moving == True:
-                        big_cactus_2.move(big_cactus_2.x - speed, constants.TREX_Y)
-                        big_cactus_1.move(big_cactus_1.x - speed, constants.TREX_Y)
-                    elif two_cactus_big4_moving == True:
-                        array_big_cactus_2_1.move(
-                            array_big_cactus_2_1.x - speed, constants.TREX_Y
+                        or (
+                            array_small_cactus_2_1.x <= trex.x + 8
+                            and array_small_cactus_2_1.x >= trex.x - 8
+                            and trex.y >= constants.TREX_Y - 7
                         )
-                        big_cactus_2.move(big_cactus_2.x - speed, constants.TREX_Y)
-                    elif two_cactus_small1_moving == True:
-                        array_small_cactus_1_1.move(
-                            array_small_cactus_1_1.x - speed, constants.TREX_Y
+                        or (small_cactus_2.x <= trex.x + 8 and small_cactus_2.x >= trex.x - 8 and trex.y >= constants.TREX_Y - 7)
+                        or (
+                            array_small_cactus_1_2.x <= trex.x + 8
+                            and array_small_cactus_1_2.x >= trex.x - 8
+                            and trex.y >= constants.TREX_Y - 7
                         )
-                        small_cactus_1.move(small_cactus_1.x - speed, constants.TREX_Y)
-                    elif two_cactus_small2_moving == True:
-                        small_cactus_1.move(small_cactus_1.x - speed, constants.TREX_Y)
-                        small_cactus_2.move(small_cactus_2.x - speed, constants.TREX_Y)
-                    elif two_cactus_small3_moving == True:
-                        small_cactus_2.move(small_cactus_2.x - speed, constants.TREX_Y)
-                        small_cactus_1.move(small_cactus_1.x - speed, constants.TREX_Y)
-                    elif two_cactus_small4_moving == True:
-                        array_small_cactus_2_1.move(
-                            array_small_cactus_2_1.x - speed, constants.TREX_Y
+                        or (
+                            array_small_cactus_1_1.x <= trex.x + 8
+                            and array_small_cactus_1_1.x >= trex.x - 8
+                            and trex.y >= constants.TREX_Y - 7
                         )
-                        small_cactus_2.move(small_cactus_2.x - speed, constants.TREX_Y)
-                    elif two_cactus_small_big1_moving == True:
-                        small_cactus_1.move(small_cactus_1.x - speed, constants.TREX_Y)
-                        big_cactus_1.move(big_cactus_1.x - speed, constants.TREX_Y)
-                    elif two_cactus_small_big2_moving == True:
-                        small_cactus_1.move(small_cactus_1.x - speed, constants.TREX_Y)
-                        big_cactus_2.move(big_cactus_2.x - speed, constants.TREX_Y)
-                    elif two_cactus_small_big3_moving == True:
-                        small_cactus_2.move(small_cactus_2.x - speed, constants.TREX_Y)
-                        big_cactus_1.move(big_cactus_1.x - speed, constants.TREX_Y)
-                    elif two_cactus_small_big4_moving == True:
-                        small_cactus_1.move(small_cactus_1.x - speed, constants.TREX_Y)
-                        big_cactus_2.move(big_cactus_2.x - speed, constants.TREX_Y)
-                    elif two_cactus_big_small1_moving == True:
-                        big_cactus_1.move(big_cactus_1.x - speed, constants.TREX_Y)
-                        small_cactus_1.move(small_cactus_1.x - speed, constants.TREX_Y)
-                    elif two_cactus_big_small2_moving == True:
-                        big_cactus_1.move(big_cactus_1.x - speed, constants.TREX_Y)
-                        small_cactus_2.move(small_cactus_2.x - speed, constants.TREX_Y)
-                    elif two_cactus_big_small3_moving == True:
-                        big_cactus_2.move(big_cactus_2.x - speed, constants.TREX_Y)
-                        small_cactus_1.move(small_cactus_1.x - speed, constants.TREX_Y)
-                    elif two_cactus_big_small4_moving == True:
-                        big_cactus_2.move(big_cactus_2.x - speed, constants.TREX_Y)
-                        small_cactus_2.move(small_cactus_2.x - speed, constants.TREX_Y)
-                    elif three_cactus_big1_moving == True:
-                        array_big_cactus_1_2.move(
-                            array_big_cactus_1_2.x - speed, constants.TREX_Y
+                        or (small_cactus_1.x <= trex.x + 8 and small_cactus_1.x >= trex.x - 8 and trex.y >= constants.TREX_Y - 7)
+                        or (
+                            array_big_cactus_2_2.x <= trex.x + 8
+                            and array_big_cactus_2_2.x >= trex.x - 8
+                            and trex.y >= constants.TREX_Y - 7
                         )
-                        array_big_cactus_1_1.move(
-                            array_big_cactus_1_1.x - speed, constants.TREX_Y
+                        or (
+                            array_big_cactus_2_1.x <= trex.x + 8
+                            and array_big_cactus_2_1.x >= trex.x - 8
+                            and trex.y >= constants.TREX_Y - 7
                         )
-                        big_cactus_1.move(big_cactus_1.x - speed, constants.TREX_Y)
-                    elif three_cactus_big2_moving == True:
-                        array_big_cactus_1_1.move(
-                            array_big_cactus_1_1.x - speed, constants.TREX_Y
+                        or (big_cactus_2.x <= trex.x + 8 and big_cactus_2.x >= trex.x - 8 and trex.y >= constants.TREX_Y - 16)
+                        or (
+                            array_big_cactus_1_2.x <= trex.x + 8
+                            and array_big_cactus_1_2.x >= trex.x - 8
+                            and trex.y >= constants.TREX_Y - 16
                         )
-                        big_cactus_2.move(big_cactus_2.x - speed, constants.TREX_Y)
-                        big_cactus_1.move(big_cactus_1.x - speed, constants.TREX_Y)
-                    elif three_cactus_big3_moving == True:
-                        array_big_cactus_1_1.move(
-                            array_big_cactus_1_1.x - speed, constants.TREX_Y
+                        or (
+                            array_big_cactus_1_1.x <= trex.x + 8
+                            and array_big_cactus_1_1.x >= trex.x - 8
+                            and trex.y >= constants.TREX_Y - 16
                         )
-                        big_cactus_2.move(big_cactus_2.x - speed, constants.TREX_Y)
-                        big_cactus_1.move(big_cactus_1.x - speed, constants.TREX_Y)
-                    elif three_cactus_big4_moving == True:
-                        big_cactus_1.move(big_cactus_1.x - speed, constants.TREX_Y)
-                        array_big_cactus_2_1.move(
-                            array_big_cactus_2_1.x - speed, constants.TREX_Y
-                        )
-                        big_cactus_2.move(big_cactus_2.x - speed, constants.TREX_Y)
-                    elif three_cactus_big5_moving == True:
-                        array_big_cactus_2_2.move(
-                            array_big_cactus_2_2.x - speed, constants.TREX_Y
-                        )
-                        array_big_cactus_2_1.move(
-                            array_big_cactus_2_1.x - speed, constants.TREX_Y
-                        )
-                        big_cactus_2.move(big_cactus_2.x - speed, constants.TREX_Y)
-                    elif three_cactus_big6_moving == True:
-                        array_big_cactus_2_1.move(
-                            array_big_cactus_2_1.x - speed, constants.TREX_Y
-                        )
-                        big_cactus_2.move(big_cactus_2.x - speed, constants.TREX_Y)
-                        big_cactus_1.move(big_cactus_1.x - speed, constants.TREX_Y)
-                    elif three_cactus_big7_moving == True:
-                        array_big_cactus_2_1.move(
-                            array_big_cactus_2_1.x - speed, constants.TREX_Y
-                        )
-                        big_cactus_1.move(big_cactus_1.x - speed, constants.TREX_Y)
-                        big_cactus_2.move(big_cactus_2.x - speed, constants.TREX_Y)
-                    elif three_cactus_big8_moving == True:
-                        big_cactus_2.move(big_cactus_2.x - speed, constants.TREX_Y)
-                        array_big_cactus_1_1.move(
-                            array_big_cactus_1_1.x - speed, constants.TREX_Y
-                        )
-                        big_cactus_1.move(big_cactus_1.x - speed, constants.TREX_Y)
-                    elif three_cactus_small1_moving == True:
-                        array_small_cactus_1_2.move(
-                            array_small_cactus_1_2.x - speed, constants.TREX_Y
-                        )
-                        array_small_cactus_1_1.move(
-                            array_small_cactus_1_1.x - speed, constants.TREX_Y
-                        )
-                        small_cactus_1.move(small_cactus_1.x - speed, constants.TREX_Y)
-                    elif three_cactus_small2_moving == True:
-                        array_small_cactus_1_1.move(
-                            array_small_cactus_1_1.x - speed, constants.TREX_Y
-                        )
-                        small_cactus_2.move(small_cactus_2.x - speed, constants.TREX_Y)
-                        small_cactus_1.move(small_cactus_1.x - speed, constants.TREX_Y)
-                    elif three_cactus_small3_moving == True:
-                        array_small_cactus_1_1.move(
-                            array_small_cactus_1_1.x - speed, constants.TREX_Y
-                        )
-                        small_cactus_1.move(small_cactus_1.x - speed, constants.TREX_Y)
-                        small_cactus_2.move(small_cactus_2.x - speed, constants.TREX_Y)
-                    elif three_cactus_small4_moving == True:
-                        small_cactus_1.move(small_cactus_1.x - speed, constants.TREX_Y)
-                        array_small_cactus_2_1.move(
-                            array_small_cactus_2_1.x - speed, constants.TREX_Y
-                        )
-                        small_cactus_2.move(small_cactus_2.x - speed, constants.TREX_Y)
-                    elif three_cactus_small5_moving == True:
-                        small_cactus_2.move(small_cactus_2.x - speed, constants.TREX_Y)
-                        array_small_cactus_1_1.move(
-                            array_big_cactus_1_1.x - speed, constants.TREX_Y
-                        )
-                        small_cactus_1.move(small_cactus_1.x - speed, constants.TREX_Y)
-                    elif three_cactus_small6_moving == True:
-                        array_small_cactus_2_1.move(
-                            array_small_cactus_2_1.x - speed, constants.TREX_Y
-                        )
-                        small_cactus_2.move(small_cactus_2.x - speed, constants.TREX_Y)
-                        small_cactus_1.move(small_cactus_1.x - speed, constants.TREX_Y)
-                    elif three_cactus_small7_moving == True:
-                        array_small_cactus_2_1.move(
-                            array_small_cactus_2_1.x - speed, constants.TREX_Y
-                        )
-                        small_cactus_1.move(small_cactus_1.x - speed, constants.TREX_Y)
-                        small_cactus_2.move(small_cactus_2.x - speed, constants.TREX_Y)
-                    elif three_cactus_small8_moving == True:
-                        array_small_cactus_2_2.move(
-                            array_small_cactus_2_2.x - speed, constants.TREX_Y
-                        )
-                        array_small_cactus_2_1.move(
-                            array_small_cactus_2_1.x - speed, constants.TREX_Y
-                        )
-                        small_cactus_2.move(small_cactus_2.x - speed, constants.TREX_Y)
+                        or (big_cactus_1.x <= trex.x + 8 and big_cactus_1.x >= trex.x - 8 and trex.y >= constants.TREX_Y - 16)
+                    ):
+                        pass
+                    # move the clouds while the trex is jumping
                     clouds.move(clouds.x - 0.1, clouds.y)
-
+                    # make the trex jump
                     trex.move(
                         trex.x, trex.y - (constants.JUMP_HEIGHT / constants.SPRITE_SIZE)
                     )
+                    # render everything
                     game.render_sprites(
                         [trex]
                         + [clouds]
@@ -1349,8 +1280,8 @@ def game_scene():
                         + [array_small_cactus_2_1]
                         + [array_small_cactus_2_2]
                     )
+                    # tick the game
                     game.tick()
-                    button_pressed = True
             else:
                 if up_button == constants.button_state["button_still_pressed"]:
                     up_button = constants.button_state["button_released"]
@@ -1422,6 +1353,53 @@ def game_scene():
                 three_cactus_small7_moving,
                 three_cactus_small8_moving,
             )
+        if (
+            (
+                array_small_cactus_2_2.x <= trex.x + 8
+                and array_small_cactus_2_2.x >= trex.x - 8
+                and trex.y >= constants.TREX_Y - 7
+            )
+            or (
+                array_small_cactus_2_1.x <= trex.x + 8
+                and array_small_cactus_2_1.x >= trex.x - 8
+                and trex.y >= constants.TREX_Y - 7
+            )
+            or (small_cactus_2.x <= trex.x + 8 and small_cactus_2.x >= trex.x - 8 and trex.y >= constants.TREX_Y - 7)
+            or (
+                array_small_cactus_1_2.x <= trex.x + 8
+                and array_small_cactus_1_2.x >= trex.x - 8
+                and trex.y >= constants.TREX_Y - 7
+            )
+            or (
+                array_small_cactus_1_1.x <= trex.x + 8
+                and array_small_cactus_1_1.x >= trex.x - 8
+                and trex.y >= constants.TREX_Y - 7
+            )
+            or (small_cactus_1.x <= trex.x + 8 and small_cactus_1.x >= trex.x - 8 and trex.y >= constants.TREX_Y - 7)
+            or (
+                array_big_cactus_2_2.x <= trex.x + 8
+                and array_big_cactus_2_2.x >= trex.x - 8
+                and trex.y >= constants.TREX_Y - 7
+            )
+            or (
+                array_big_cactus_2_1.x <= trex.x + 8
+                and array_big_cactus_2_1.x >= trex.x - 8
+                and trex.y >= constants.TREX_Y - 7
+            )
+            or (big_cactus_2.x <= trex.x + 8 and big_cactus_2.x >= trex.x - 8 and trex.y >= constants.TREX_Y - 16)
+            or (
+                array_big_cactus_1_2.x <= trex.x + 8
+                and array_big_cactus_1_2.x >= trex.x - 8
+                and trex.y >= constants.TREX_Y - 16
+            )
+            or (
+                array_big_cactus_1_1.x <= trex.x + 8
+                and array_big_cactus_1_1.x >= trex.x - 8
+                and trex.y >= constants.TREX_Y - 16
+            )
+            or (big_cactus_1.x <= trex.x + 8 and big_cactus_1.x >= trex.x - 8 and trex.y >= constants.TREX_Y - 16)
+        ):
+            pass
         game.render_sprites(
             [trex]
             + [clouds]
@@ -1438,10 +1416,8 @@ def game_scene():
             + [array_small_cactus_2_1]
             + [array_small_cactus_2_2]
         )
+        game.render_block()
         game.tick()
-        if button_pressed == True:
-            time.sleep(0.01)
-            button_pressed == False
 
 
 if __name__ == "__main__":
