@@ -1416,7 +1416,6 @@ def game_scene():
             + [array_small_cactus_2_1]
             + [array_small_cactus_2_2]
         )
-        game.render_block()
         game.tick()
 
 

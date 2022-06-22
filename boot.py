@@ -1,1 +1,3 @@
-import shelve
+import storage
+
+storage.remount("/", True)
