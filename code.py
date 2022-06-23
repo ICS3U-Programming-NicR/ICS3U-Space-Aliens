@@ -28,7 +28,7 @@ def end_game(
     array_small_cactus_1_2,
     array_small_cactus_2_1,
     array_small_cactus_2_2,
-    points
+    points,
 ):
     image_bank_background = stage.Bank.from_bmp16("space_aliens_background.bmp")
     image_bank_sprites = stage.Bank.from_bmp16("space_aliens.bmp")
@@ -74,7 +74,7 @@ def end_game(
     if points > highscore:
         try:
             with open("/highscore.txt", "w") as fp:
-                fp.write('{}'.format(points))
+                fp.write("{}".format(points))
         except:
             print("unable to save")
             pass
@@ -463,7 +463,8 @@ def gravity(
                 and array_big_cactus_2_1.x >= trex.x - 8
                 and trex.y >= constants.TREX_Y - 7
             )
-            or (big_cactus_2.x <= trex.x + 8
+            or (
+                big_cactus_2.x <= trex.x + 8
                 and big_cactus_2.x >= trex.x - 8
                 and trex.y >= constants.TREX_Y - 16
             )
@@ -1248,7 +1249,8 @@ def game_scene():
                             and array_small_cactus_1_1.x >= trex.x - 8
                             and trex.y >= constants.TREX_Y - 7
                         )
-                        or (small_cactus_1.x <= trex.x + 8
+                        or (
+                            small_cactus_1.x <= trex.x + 8
                             and small_cactus_1.x >= trex.x - 8
                             and trex.y >= constants.TREX_Y - 7
                         )
@@ -1262,7 +1264,8 @@ def game_scene():
                             and array_big_cactus_2_1.x >= trex.x - 8
                             and trex.y >= constants.TREX_Y - 7
                         )
-                        or (big_cactus_2.x <= trex.x + 8
+                        or (
+                            big_cactus_2.x <= trex.x + 8
                             and big_cactus_2.x >= trex.x - 8
                             and trex.y >= constants.TREX_Y - 16
                         )
@@ -1277,9 +1280,9 @@ def game_scene():
                             and trex.y >= constants.TREX_Y - 16
                         )
                         or (
-                            big_cactus_1.x <= trex.x + 8 and
-                            big_cactus_1.x >= trex.x - 8 and
-                            trex.y >= constants.TREX_Y - 16
+                            big_cactus_1.x <= trex.x + 8 
+                            and big_cactus_1.x >= trex.x - 8 
+                            and trex.y >= constants.TREX_Y - 16
                         )
                     ):
                         end_game(
@@ -1429,7 +1432,8 @@ def game_scene():
                             and array_small_cactus_1_1.x >= trex.x - 8
                             and trex.y >= constants.TREX_Y - 7
                         )
-                        or (small_cactus_1.x <= trex.x + 8
+                        or (
+                            small_cactus_1.x <= trex.x + 8
                             and small_cactus_1.x >= trex.x - 8
                             and trex.y >= constants.TREX_Y - 7
                         )
@@ -1598,7 +1602,7 @@ def game_scene():
                     array_small_cactus_2_1,
                     array_small_cactus_2_2,
                     points,
-            )
+                )
         if (
             (
                 stage.collide(
