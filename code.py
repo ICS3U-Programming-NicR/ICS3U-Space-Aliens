@@ -8,8 +8,8 @@ import time
 
 import constants
 import stage
-import ugame
 import supervisor
+import ugame
 
 
 def end_game(
