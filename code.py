@@ -9,6 +9,136 @@ import time
 import constants
 import stage
 import ugame
+import supervisor
+
+
+def end_game(
+    game,
+    trex,
+    clouds,
+    small_cactus_1,
+    small_cactus_2,
+    big_cactus_1,
+    big_cactus_2,
+    array_big_cactus_1_1,
+    array_big_cactus_1_2,
+    array_big_cactus_2_1,
+    array_big_cactus_2_2,
+    array_small_cactus_1_1,
+    array_small_cactus_1_2,
+    array_small_cactus_2_1,
+    array_small_cactus_2_2,
+    points
+):
+    image_bank_background = stage.Bank.from_bmp16("space_aliens_background.bmp")
+    image_bank_sprites = stage.Bank.from_bmp16("space_aliens.bmp")
+    background = stage.Grid(
+        image_bank_background, constants.SCREEN_GRID_X, constants.SCREEN_GRID_Y
+    )
+    end_game_text = stage.Text(
+        width=29, height=12, font=None, palette=constants.RED_PALETTE, buffer=None
+    )
+    floor = stage.Sprite(
+        image_bank_sprites, 1, 0 * constants.SPRITE_SIZE, constants.FLOOR_Y
+    )
+    floor2 = stage.Sprite(
+        image_bank_sprites, 1, (1 * constants.SPRITE_SIZE), constants.FLOOR_Y
+    )
+    floor3 = stage.Sprite(
+        image_bank_sprites, 1, (2 * constants.SPRITE_SIZE), constants.FLOOR_Y
+    )
+    floor4 = stage.Sprite(
+        image_bank_sprites, 1, (3 * constants.SPRITE_SIZE), constants.FLOOR_Y
+    )
+    floor5 = stage.Sprite(
+        image_bank_sprites, 1, (4 * constants.SPRITE_SIZE), constants.FLOOR_Y
+    )
+    floor6 = stage.Sprite(
+        image_bank_sprites, 1, (5 * constants.SPRITE_SIZE), constants.FLOOR_Y
+    )
+    floor7 = stage.Sprite(
+        image_bank_sprites, 1, (6 * constants.SPRITE_SIZE), constants.FLOOR_Y
+    )
+    floor8 = stage.Sprite(
+        image_bank_sprites, 1, (7 * constants.SPRITE_SIZE), constants.FLOOR_Y
+    )
+    floor9 = stage.Sprite(
+        image_bank_sprites, 1, (8 * constants.SPRITE_SIZE), constants.FLOOR_Y
+    )
+    floor10 = stage.Sprite(
+        image_bank_sprites, 1, (9 * constants.SPRITE_SIZE), constants.FLOOR_Y
+    )
+    with open("highscore.txt", "r") as reader:
+        highscore_num = reader.read()
+        highscore = int(highscore_num)
+    if points > highscore:
+        try:
+            with open("/highscore.txt", "w") as fp:
+                fp.write('{}'.format(points))
+        except:
+            print("unable to save")
+            pass
+    # set the complete floor
+    complete_floor = (
+        [floor]
+        + [floor2]
+        + [floor3]
+        + [floor4]
+        + [floor5]
+        + [floor6]
+        + [floor7]
+        + [floor8]
+        + [floor9]
+        + [floor10]
+    )
+
+    # move it to the center
+    end_game_text.move(10, 10)
+    end_game_text.text("Press <SELECT> to \nrestart the game")
+    game.layers = (
+        [end_game_text]
+        + [trex]
+        + complete_floor
+        + [clouds]
+        + [small_cactus_1]
+        + [array_small_cactus_1_1]
+        + [array_small_cactus_1_2]
+        + [small_cactus_2]
+        + [array_small_cactus_2_1]
+        + [array_small_cactus_2_2]
+        + [big_cactus_1]
+        + [array_big_cactus_1_1]
+        + [array_big_cactus_1_2]
+        + [big_cactus_2]
+        + [array_big_cactus_2_1]
+        + [array_big_cactus_2_2]
+        + [background]
+    )
+    game.render_block()
+    while True:
+        # Get user input
+        keys = ugame.buttons.get_pressed()
+        # When the start button is pressed or the up button start the game
+        if keys & ugame.K_SELECT:
+            supervisor.reload()
+        game.render_sprites(
+            [trex]
+            + [clouds]
+            + [big_cactus_1]
+            + [big_cactus_2]
+            + [small_cactus_1]
+            + [small_cactus_2]
+            + [array_big_cactus_1_1]
+            + [array_big_cactus_1_2]
+            + [array_big_cactus_2_1]
+            + [array_big_cactus_2_2]
+            + [array_small_cactus_1_1]
+            + [array_small_cactus_1_2]
+            + [array_small_cactus_2_1]
+            + [array_small_cactus_2_2]
+            + complete_floor
+        )
+        game.tick()
 
 
 def move_cactus(
@@ -237,6 +367,8 @@ def gravity(
     three_cactus_small6_moving,
     three_cactus_small7_moving,
     three_cactus_small8_moving,
+    points,
+    points_text,
 ):
     while trex.y < constants.TREX_Y:
         move_cactus(
@@ -292,7 +424,7 @@ def gravity(
         )
         if (
             (
-                array_small_cactus_2_2.x <= trex.x + 8
+                array_small_cactus_2_2.x <= trex.x + 7
                 and array_small_cactus_2_2.x >= trex.x - 8
                 and trex.y >= constants.TREX_Y - 7
             )
@@ -303,7 +435,7 @@ def gravity(
             )
             or (small_cactus_2.x <= trex.x + 8 and small_cactus_2.x >= trex.x - 8 and trex.y >= constants.TREX_Y - 7)
             or (
-                array_small_cactus_1_2.x <= trex.x + 8
+                array_small_cactus_1_2.x <= trex.x + 7
                 and array_small_cactus_1_2.x >= trex.x - 8
                 and trex.y >= constants.TREX_Y - 7
             )
@@ -314,7 +446,7 @@ def gravity(
             )
             or (small_cactus_1.x <= trex.x + 8 and small_cactus_1.x >= trex.x - 8 and trex.y >= constants.TREX_Y - 7)
             or (
-                array_big_cactus_2_2.x <= trex.x + 8
+                array_big_cactus_2_2.x <= trex.x + 7
                 and array_big_cactus_2_2.x >= trex.x - 8
                 and trex.y >= constants.TREX_Y - 7
             )
@@ -325,7 +457,7 @@ def gravity(
             )
             or (big_cactus_2.x <= trex.x + 8 and big_cactus_2.x >= trex.x - 8 and trex.y >= constants.TREX_Y - 16)
             or (
-                array_big_cactus_1_2.x <= trex.x + 8
+                array_big_cactus_1_2.x <= trex.x + 7
                 and array_big_cactus_1_2.x >= trex.x - 8
                 and trex.y >= constants.TREX_Y - 16
             )
@@ -336,7 +468,14 @@ def gravity(
             )
             or (big_cactus_1.x <= trex.x + 8 and big_cactus_1.x >= trex.x - 8 and trex.y >= constants.TREX_Y - 16)
         ):
-            pass
+            end_game = True
+            return end_game
+        else:
+            points = points + 1
+            points_text.clear()
+            points_text.cursor(0, 0)
+            points_text.move(1, 1)
+            points_text.text("Score: {}".format(points))
         clouds.move(clouds.x - 0.1, clouds.y)
         trex.move(trex.x, trex.y + (constants.JUMP_HEIGHT / constants.SPRITE_SIZE))
         game.render_sprites(
@@ -356,7 +495,6 @@ def gravity(
             + [array_small_cactus_2_2]
         )
         game.tick()
-
 
 def splash_scene():
     # this shows the splash screen
@@ -537,7 +675,6 @@ def game_scene():
     # set the starting points
     points = 0
     # boolean for checking if jump
-    playsound = True
     big_cactus_1_moving = True
     big_cactus_2_moving = False
     small_cactus_1_moving = False
@@ -592,17 +729,24 @@ def game_scene():
     background = stage.Grid(
         image_bank_background, constants.SCREEN_GRID_X, constants.SCREEN_GRID_Y
     )
-    # highpoints_num = stage.Text(
-    #     width=29, height=12, font=None, palette=constants.RED_PALETTE, buffer=None
-    # )
-    # # move it where I want it
-    # highpoints_num.move(32, 26)
+    highpoints_num = stage.Text(
+        width=29, height=12, font=None, palette=constants.RED_PALETTE, buffer=None
+    )
+    # move it where I want it
+    highpoints_num.move(1, 13)
+    with open("highscore.txt", "r") as reader:
+        highscore_num = reader.read()
+    highpoints_num.text("Highscore: {}".format(highscore_num))
+
     # # open the highpoints
     points_text = stage.Text(width=29, height=14)
     points_text.clear()
-    points_text.cursor(0,0)
-    points_text.move(1,1)
-    points_text.text("points: {0}".format(points))
+    points_text.cursor(0, 0)
+    points_text.move(1, 1)
+    points_text.text("Score: {0}".format(points))
+    score = stage.Stage(ugame.display, constants.FPS)
+    score.layer = [points_text]
+    score.render_block()
     trex = stage.Sprite(image_bank_sprites, 4, constants.TREX_X, constants.TREX_Y)
     # create the floor
     floor = stage.Sprite(
@@ -710,7 +854,7 @@ def game_scene():
         + [small_cactus_1]
         + [small_cactus_2]
         + [points_text]
-        # + [highpoints_num]
+        + [highpoints_num]
         + [background]
     )
     # takes layers and shows them on the screen
@@ -719,8 +863,8 @@ def game_scene():
     while True:
         points = points + 1
         points_text.clear()
-        points_text.cursor(0,0)
-        points_text.move(1,1)
+        points_text.cursor(0, 0)
+        points_text.move(1, 1)
         points_text.text("Score: {}".format(points))
         # incrementally increase the speed
         speed = speed + 0.0001
@@ -1007,6 +1151,7 @@ def game_scene():
             elif up_button == constants.button_state["button_just_pressed"]:
                 up_button = constants.button_state["button_still_pressed"]
                 # makes the trex jump
+                sound.play(jump_sound)
                 while trex.y != (constants.TREX_Y - constants.JUMP_HEIGHT):
                     # while the trex is in the air keep on moving the clouds and the cacti
                     clouds.move(clouds.x - 0.1, clouds.y)
@@ -1063,7 +1208,7 @@ def game_scene():
                     )
                     if (
                         (
-                            array_small_cactus_2_2.x <= trex.x + 8
+                            array_small_cactus_2_2.x <= trex.x + 5
                             and array_small_cactus_2_2.x >= trex.x - 8
                             and trex.y >= constants.TREX_Y - 7
                         )
@@ -1074,18 +1219,18 @@ def game_scene():
                         )
                         or (small_cactus_2.x <= trex.x + 8 and small_cactus_2.x >= trex.x - 8 and trex.y >= constants.TREX_Y - 7)
                         or (
-                            array_small_cactus_1_2.x <= trex.x + 8
+                            array_small_cactus_1_2.x <= trex.x + 5
                             and array_small_cactus_1_2.x >= trex.x - 8
                             and trex.y >= constants.TREX_Y - 7
                         )
                         or (
-                            array_small_cactus_1_1.x <= trex.x + 8
+                            array_small_cactus_1_1.x <= trex.x + 5
                             and array_small_cactus_1_1.x >= trex.x - 8
                             and trex.y >= constants.TREX_Y - 7
                         )
                         or (small_cactus_1.x <= trex.x + 8 and small_cactus_1.x >= trex.x - 8 and trex.y >= constants.TREX_Y - 7)
                         or (
-                            array_big_cactus_2_2.x <= trex.x + 8
+                            array_big_cactus_2_2.x <= trex.x + 5
                             and array_big_cactus_2_2.x >= trex.x - 8
                             and trex.y >= constants.TREX_Y - 7
                         )
@@ -1096,7 +1241,7 @@ def game_scene():
                         )
                         or (big_cactus_2.x <= trex.x + 8 and big_cactus_2.x >= trex.x - 8 and trex.y >= constants.TREX_Y - 16)
                         or (
-                            array_big_cactus_1_2.x <= trex.x + 8
+                            array_big_cactus_1_2.x <= trex.x + 5
                             and array_big_cactus_1_2.x >= trex.x - 8
                             and trex.y >= constants.TREX_Y - 16
                         )
@@ -1107,12 +1252,29 @@ def game_scene():
                         )
                         or (big_cactus_1.x <= trex.x + 8 and big_cactus_1.x >= trex.x - 8 and trex.y >= constants.TREX_Y - 16)
                     ):
-                        pass
+                        end_game(
+                            game,
+                            trex,
+                            clouds,
+                            small_cactus_1,
+                            small_cactus_2,
+                            big_cactus_1,
+                            big_cactus_2,
+                            array_big_cactus_1_1,
+                            array_big_cactus_1_2,
+                            array_big_cactus_2_1,
+                            array_big_cactus_2_2,
+                            array_small_cactus_1_1,
+                            array_small_cactus_1_2,
+                            array_small_cactus_2_1,
+                            array_small_cactus_2_2,
+                            points,
+                        )
                     else:
                         points = points + 1
                         points_text.clear()
-                        points_text.cursor(0,0)
-                        points_text.move(1,1)
+                        points_text.cursor(0, 0)
+                        points_text.move(1, 1)
                         points_text.text("Score: {}".format(points))
 
                     trex.move(
@@ -1157,6 +1319,7 @@ def game_scene():
             elif up_button == constants.button_state["button_just_pressed"]:
                 up_button = constants.button_state["button_still_pressed"]
                 # makes the trex jump
+                sound.play(jump_sound)
                 while trex.y != (constants.TREX_Y - constants.JUMP_HEIGHT):
                     # while the trex is in the air keep on moving the clouds and the cactus
                     move_cactus(
@@ -1212,7 +1375,7 @@ def game_scene():
                     )
                     if (
                         (
-                            array_small_cactus_2_2.x <= trex.x + 8
+                            array_small_cactus_2_2.x <= trex.x + 5
                             and array_small_cactus_2_2.x >= trex.x - 8
                             and trex.y >= constants.TREX_Y - 7
                         )
@@ -1223,7 +1386,7 @@ def game_scene():
                         )
                         or (small_cactus_2.x <= trex.x + 8 and small_cactus_2.x >= trex.x - 8 and trex.y >= constants.TREX_Y - 7)
                         or (
-                            array_small_cactus_1_2.x <= trex.x + 8
+                            array_small_cactus_1_2.x <= trex.x + 5
                             and array_small_cactus_1_2.x >= trex.x - 8
                             and trex.y >= constants.TREX_Y - 7
                         )
@@ -1234,7 +1397,7 @@ def game_scene():
                         )
                         or (small_cactus_1.x <= trex.x + 8 and small_cactus_1.x >= trex.x - 8 and trex.y >= constants.TREX_Y - 7)
                         or (
-                            array_big_cactus_2_2.x <= trex.x + 8
+                            array_big_cactus_2_2.x <= trex.x + 5
                             and array_big_cactus_2_2.x >= trex.x - 8
                             and trex.y >= constants.TREX_Y - 7
                         )
@@ -1245,7 +1408,7 @@ def game_scene():
                         )
                         or (big_cactus_2.x <= trex.x + 8 and big_cactus_2.x >= trex.x - 8 and trex.y >= constants.TREX_Y - 16)
                         or (
-                            array_big_cactus_1_2.x <= trex.x + 8
+                            array_big_cactus_1_2.x <= trex.x + 5
                             and array_big_cactus_1_2.x >= trex.x - 8
                             and trex.y >= constants.TREX_Y - 16
                         )
@@ -1256,7 +1419,30 @@ def game_scene():
                         )
                         or (big_cactus_1.x <= trex.x + 8 and big_cactus_1.x >= trex.x - 8 and trex.y >= constants.TREX_Y - 16)
                     ):
-                        pass
+                        end_game(
+                            game,
+                            trex,
+                            clouds,
+                            small_cactus_1,
+                            small_cactus_2,
+                            big_cactus_1,
+                            big_cactus_2,
+                            array_big_cactus_1_1,
+                            array_big_cactus_1_2,
+                            array_big_cactus_2_1,
+                            array_big_cactus_2_2,
+                            array_small_cactus_1_1,
+                            array_small_cactus_1_2,
+                            array_small_cactus_2_1,
+                            array_small_cactus_2_2,
+                            points,
+                        )
+                    else:
+                        points = points + 1
+                        points_text.clear()
+                        points_text.cursor(0, 0)
+                        points_text.move(1, 1)
+                        points_text.text("Score: {}".format(points))
                     # move the clouds while the trex is jumping
                     clouds.move(clouds.x - 0.1, clouds.y)
                     # make the trex jump
@@ -1291,15 +1477,9 @@ def game_scene():
         if keys & ugame.K_DOWN:
             pass
         # update game logic
-        # sees if the trex is above the floor if it is it plays a sound
-        if trex.y < constants.TREX_Y and playsound == True:
-            sound.play(jump_sound)
-            playsound = False
-        elif trex.y == constants.TREX_Y:
-            playsound = True
         # checks if the trex is in the air if it is it falls due to gravity
         if trex.y == (constants.TREX_Y - constants.JUMP_HEIGHT):
-            gravity(
+            finish_game = gravity(
                 trex,
                 game,
                 clouds,
@@ -1352,54 +1532,193 @@ def game_scene():
                 three_cactus_small6_moving,
                 three_cactus_small7_moving,
                 three_cactus_small8_moving,
+                points,
+                points_text,
+            )
+            if finish_game:
+                end_game(
+                game,
+                trex,
+                clouds,
+                small_cactus_1,
+                small_cactus_2,
+                big_cactus_1,
+                big_cactus_2,
+                array_big_cactus_1_1,
+                array_big_cactus_1_2,
+                array_big_cactus_2_1,
+                array_big_cactus_2_2,
+                array_small_cactus_1_1,
+                array_small_cactus_1_2,
+                array_small_cactus_2_1,
+                array_small_cactus_2_2,
+                points,
             )
         if (
             (
-                array_small_cactus_2_2.x <= trex.x + 8
-                and array_small_cactus_2_2.x >= trex.x - 8
-                and trex.y >= constants.TREX_Y - 7
+                stage.collide(
+                    array_small_cactus_2_2.x + 5,
+                    array_small_cactus_2_2.y + 7,
+                    array_small_cactus_2_2.x + 10,
+                    array_small_cactus_2_2.y + 16,
+                    trex.x,
+                    trex.y,
+                    trex.x + 16,
+                    trex.y + 16,
+                )
             )
             or (
-                array_small_cactus_2_1.x <= trex.x + 8
-                and array_small_cactus_2_1.x >= trex.x - 8
-                and trex.y >= constants.TREX_Y - 7
-            )
-            or (small_cactus_2.x <= trex.x + 8 and small_cactus_2.x >= trex.x - 8 and trex.y >= constants.TREX_Y - 7)
-            or (
-                array_small_cactus_1_2.x <= trex.x + 8
-                and array_small_cactus_1_2.x >= trex.x - 8
-                and trex.y >= constants.TREX_Y - 7
-            )
-            or (
-                array_small_cactus_1_1.x <= trex.x + 8
-                and array_small_cactus_1_1.x >= trex.x - 8
-                and trex.y >= constants.TREX_Y - 7
-            )
-            or (small_cactus_1.x <= trex.x + 8 and small_cactus_1.x >= trex.x - 8 and trex.y >= constants.TREX_Y - 7)
-            or (
-                array_big_cactus_2_2.x <= trex.x + 8
-                and array_big_cactus_2_2.x >= trex.x - 8
-                and trex.y >= constants.TREX_Y - 7
+                stage.collide(
+                    array_small_cactus_2_1.x + 5,
+                    array_small_cactus_2_1.y + 7,
+                    array_small_cactus_2_1.x + 10,
+                    array_small_cactus_2_1.y + 16,
+                    trex.x,
+                    trex.y,
+                    trex.x + 16,
+                    trex.y + 16,
+                )
             )
             or (
-                array_big_cactus_2_1.x <= trex.x + 8
-                and array_big_cactus_2_1.x >= trex.x - 8
-                and trex.y >= constants.TREX_Y - 7
+                stage.collide(
+                    small_cactus_2.x + 5,
+                    small_cactus_2.y + 7,
+                    small_cactus_2.x + 10,
+                    small_cactus_2.y + 16,
+                    trex.x,
+                    trex.y,
+                    trex.x + 16,
+                    trex.y + 16,
+                )
             )
-            or (big_cactus_2.x <= trex.x + 8 and big_cactus_2.x >= trex.x - 8 and trex.y >= constants.TREX_Y - 16)
             or (
-                array_big_cactus_1_2.x <= trex.x + 8
-                and array_big_cactus_1_2.x >= trex.x - 8
-                and trex.y >= constants.TREX_Y - 16
+                stage.collide(
+                    array_small_cactus_1_2.x + 5,
+                    array_small_cactus_1_2.y + 7,
+                    array_small_cactus_1_2.x + 10,
+                    array_small_cactus_1_2.y + 16,
+                    trex.x,
+                    trex.y,
+                    trex.x + 16,
+                    trex.y + 16,
+                )
             )
             or (
-                array_big_cactus_1_1.x <= trex.x + 8
-                and array_big_cactus_1_1.x >= trex.x - 8
-                and trex.y >= constants.TREX_Y - 16
+                stage.collide(
+                    array_small_cactus_1_1.x + 5,
+                    array_small_cactus_1_1.y + 7,
+                    array_small_cactus_1_1.x + 10,
+                    array_small_cactus_1_1.y + 16,
+                    trex.x,
+                    trex.y,
+                    trex.x + 16,
+                    trex.y + 16,
+                )
             )
-            or (big_cactus_1.x <= trex.x + 8 and big_cactus_1.x >= trex.x - 8 and trex.y >= constants.TREX_Y - 16)
+            or (
+                stage.collide(
+                    small_cactus_1.x + 5,
+                    small_cactus_1.y + 7,
+                    small_cactus_1.x + 10,
+                    small_cactus_1.y + 16,
+                    trex.x,
+                    trex.y,
+                    trex.x + 16,
+                    trex.y + 16,
+                )
+            )
+            or (
+                stage.collide(
+                    array_big_cactus_2_2.x + 4,
+                    array_big_cactus_2_2.y,
+                    array_big_cactus_2_2.x + 12,
+                    array_big_cactus_2_2.y + 16,
+                    trex.x,
+                    trex.y,
+                    trex.x + 16,
+                    trex.y + 16,
+                )
+            )
+            or (
+                stage.collide(
+                    array_big_cactus_2_1.x + 4,
+                    array_big_cactus_2_1.y,
+                    array_big_cactus_2_1.x + 12,
+                    array_big_cactus_2_1.y + 16,
+                    trex.x,
+                    trex.y,
+                    trex.x + 16,
+                    trex.y + 16,
+                )
+            )
+            or (
+                stage.collide(
+                    big_cactus_2.x + 4,
+                    big_cactus_2.y,
+                    big_cactus_2.x + 12,
+                    big_cactus_2.y + 16,
+                    trex.x,
+                    trex.y,
+                    trex.x + 16,
+                    trex.y + 16,
+                )
+            )
+            or (
+                stage.collide(
+                    array_big_cactus_1_2.x + 4,
+                    array_big_cactus_1_2.y,
+                    array_big_cactus_1_2.x + 12,
+                    array_big_cactus_1_2.y + 16,
+                    trex.x,
+                    trex.y,
+                    trex.x + 16,
+                    trex.y + 16,
+                )
+            )
+            or (
+                stage.collide(
+                    array_big_cactus_1_1.x + 4,
+                    array_big_cactus_1_1.y,
+                    array_big_cactus_1_1.x + 12,
+                    array_big_cactus_1_1.y + 16,
+                    trex.x,
+                    trex.y,
+                    trex.x + 16,
+                    trex.y + 16,
+                )
+            )
+            or (
+                stage.collide(
+                    big_cactus_1.x + 7,
+                    big_cactus_1.y,
+                    big_cactus_1.x + 12,
+                    big_cactus_1.y + 16,
+                    trex.x,
+                    trex.y,
+                    trex.x + 16,
+                    trex.y + 16,
+                )
+            )
         ):
-            pass
+            end_game(
+                game,
+                trex,
+                clouds,
+                small_cactus_1,
+                small_cactus_2,
+                big_cactus_1,
+                big_cactus_2,
+                array_big_cactus_1_1,
+                array_big_cactus_1_2,
+                array_big_cactus_2_1,
+                array_big_cactus_2_2,
+                array_small_cactus_1_1,
+                array_small_cactus_1_2,
+                array_small_cactus_2_1,
+                array_small_cactus_2_2,
+                points,
+            )
+
         game.render_sprites(
             [trex]
             + [clouds]
