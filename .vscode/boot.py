@@ -1,2 +1,0 @@
-import shelve
-print("hello")
