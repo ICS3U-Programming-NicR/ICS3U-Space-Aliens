@@ -45,7 +45,6 @@ JUMP_HEIGHT = 36
 TREX_X = 16
 
 
-
 # button state dictionary
 button_state = {
     "button_up": "up",
