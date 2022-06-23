@@ -1280,8 +1280,8 @@ def game_scene():
                             and trex.y >= constants.TREX_Y - 16
                         )
                         or (
-                            big_cactus_1.x <= trex.x + 8 
-                            and big_cactus_1.x >= trex.x - 8 
+                            big_cactus_1.x <= trex.x + 8
+                            and big_cactus_1.x >= trex.x - 8
                             and trex.y >= constants.TREX_Y - 16
                         )
                     ):
