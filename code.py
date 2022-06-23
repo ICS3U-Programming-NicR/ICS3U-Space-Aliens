@@ -433,7 +433,11 @@ def gravity(
                 and array_small_cactus_2_1.x >= trex.x - 8
                 and trex.y >= constants.TREX_Y - 7
             )
-            or (small_cactus_2.x <= trex.x + 8 and small_cactus_2.x >= trex.x - 8 and trex.y >= constants.TREX_Y - 7)
+            or (
+                small_cactus_2.x <= trex.x + 8
+                and small_cactus_2.x >= trex.x - 8
+                and trex.y >= constants.TREX_Y - 7
+            )
             or (
                 array_small_cactus_1_2.x <= trex.x + 7
                 and array_small_cactus_1_2.x >= trex.x - 8
@@ -444,7 +448,11 @@ def gravity(
                 and array_small_cactus_1_1.x >= trex.x - 8
                 and trex.y >= constants.TREX_Y - 7
             )
-            or (small_cactus_1.x <= trex.x + 8 and small_cactus_1.x >= trex.x - 8 and trex.y >= constants.TREX_Y - 7)
+            or (
+                small_cactus_1.x <= trex.x + 8
+                and small_cactus_1.x >= trex.x - 8
+                and trex.y >= constants.TREX_Y - 7
+            )
             or (
                 array_big_cactus_2_2.x <= trex.x + 7
                 and array_big_cactus_2_2.x >= trex.x - 8
@@ -455,7 +463,10 @@ def gravity(
                 and array_big_cactus_2_1.x >= trex.x - 8
                 and trex.y >= constants.TREX_Y - 7
             )
-            or (big_cactus_2.x <= trex.x + 8 and big_cactus_2.x >= trex.x - 8 and trex.y >= constants.TREX_Y - 16)
+            or (big_cactus_2.x <= trex.x + 8
+                and big_cactus_2.x >= trex.x - 8
+                and trex.y >= constants.TREX_Y - 16
+            )
             or (
                 array_big_cactus_1_2.x <= trex.x + 7
                 and array_big_cactus_1_2.x >= trex.x - 8
@@ -466,7 +477,11 @@ def gravity(
                 and array_big_cactus_1_1.x >= trex.x - 8
                 and trex.y >= constants.TREX_Y - 16
             )
-            or (big_cactus_1.x <= trex.x + 8 and big_cactus_1.x >= trex.x - 8 and trex.y >= constants.TREX_Y - 16)
+            or (
+                big_cactus_1.x <= trex.x + 8
+                and big_cactus_1.x >= trex.x - 8
+                and trex.y >= constants.TREX_Y - 16
+            )
         ):
             end_game = True
             return end_game
@@ -495,6 +510,7 @@ def gravity(
             + [array_small_cactus_2_2]
         )
         game.tick()
+
 
 def splash_scene():
     # this shows the splash screen
@@ -1217,7 +1233,11 @@ def game_scene():
                             and array_small_cactus_2_1.x >= trex.x - 8
                             and trex.y >= constants.TREX_Y - 7
                         )
-                        or (small_cactus_2.x <= trex.x + 8 and small_cactus_2.x >= trex.x - 8 and trex.y >= constants.TREX_Y - 7)
+                        or (
+                            small_cactus_2.x <= trex.x + 8
+                            and small_cactus_2.x >= trex.x - 8
+                            and trex.y >= constants.TREX_Y - 7
+                        )
                         or (
                             array_small_cactus_1_2.x <= trex.x + 5
                             and array_small_cactus_1_2.x >= trex.x - 8
@@ -1228,7 +1248,10 @@ def game_scene():
                             and array_small_cactus_1_1.x >= trex.x - 8
                             and trex.y >= constants.TREX_Y - 7
                         )
-                        or (small_cactus_1.x <= trex.x + 8 and small_cactus_1.x >= trex.x - 8 and trex.y >= constants.TREX_Y - 7)
+                        or (small_cactus_1.x <= trex.x + 8
+                            and small_cactus_1.x >= trex.x - 8
+                            and trex.y >= constants.TREX_Y - 7
+                        )
                         or (
                             array_big_cactus_2_2.x <= trex.x + 5
                             and array_big_cactus_2_2.x >= trex.x - 8
@@ -1239,7 +1262,10 @@ def game_scene():
                             and array_big_cactus_2_1.x >= trex.x - 8
                             and trex.y >= constants.TREX_Y - 7
                         )
-                        or (big_cactus_2.x <= trex.x + 8 and big_cactus_2.x >= trex.x - 8 and trex.y >= constants.TREX_Y - 16)
+                        or (big_cactus_2.x <= trex.x + 8
+                            and big_cactus_2.x >= trex.x - 8
+                            and trex.y >= constants.TREX_Y - 16
+                        )
                         or (
                             array_big_cactus_1_2.x <= trex.x + 5
                             and array_big_cactus_1_2.x >= trex.x - 8
@@ -1250,7 +1276,11 @@ def game_scene():
                             and array_big_cactus_1_1.x >= trex.x - 8
                             and trex.y >= constants.TREX_Y - 16
                         )
-                        or (big_cactus_1.x <= trex.x + 8 and big_cactus_1.x >= trex.x - 8 and trex.y >= constants.TREX_Y - 16)
+                        or (
+                            big_cactus_1.x <= trex.x + 8 and
+                            big_cactus_1.x >= trex.x - 8 and
+                            trex.y >= constants.TREX_Y - 16
+                        )
                     ):
                         end_game(
                             game,
@@ -1384,7 +1414,11 @@ def game_scene():
                             and array_small_cactus_2_1.x >= trex.x - 8
                             and trex.y >= constants.TREX_Y - 7
                         )
-                        or (small_cactus_2.x <= trex.x + 8 and small_cactus_2.x >= trex.x - 8 and trex.y >= constants.TREX_Y - 7)
+                        or (
+                            small_cactus_2.x <= trex.x + 8
+                            and small_cactus_2.x >= trex.x - 8
+                            and trex.y >= constants.TREX_Y - 7
+                        )
                         or (
                             array_small_cactus_1_2.x <= trex.x + 5
                             and array_small_cactus_1_2.x >= trex.x - 8
@@ -1395,7 +1429,10 @@ def game_scene():
                             and array_small_cactus_1_1.x >= trex.x - 8
                             and trex.y >= constants.TREX_Y - 7
                         )
-                        or (small_cactus_1.x <= trex.x + 8 and small_cactus_1.x >= trex.x - 8 and trex.y >= constants.TREX_Y - 7)
+                        or (small_cactus_1.x <= trex.x + 8
+                            and small_cactus_1.x >= trex.x - 8
+                            and trex.y >= constants.TREX_Y - 7
+                        )
                         or (
                             array_big_cactus_2_2.x <= trex.x + 5
                             and array_big_cactus_2_2.x >= trex.x - 8
@@ -1406,7 +1443,11 @@ def game_scene():
                             and array_big_cactus_2_1.x >= trex.x - 8
                             and trex.y >= constants.TREX_Y - 7
                         )
-                        or (big_cactus_2.x <= trex.x + 8 and big_cactus_2.x >= trex.x - 8 and trex.y >= constants.TREX_Y - 16)
+                        or (
+                            big_cactus_2.x <= trex.x + 8
+                            and big_cactus_2.x >= trex.x - 8
+                            and trex.y >= constants.TREX_Y - 16
+                        )
                         or (
                             array_big_cactus_1_2.x <= trex.x + 5
                             and array_big_cactus_1_2.x >= trex.x - 8
@@ -1417,7 +1458,11 @@ def game_scene():
                             and array_big_cactus_1_1.x >= trex.x - 8
                             and trex.y >= constants.TREX_Y - 16
                         )
-                        or (big_cactus_1.x <= trex.x + 8 and big_cactus_1.x >= trex.x - 8 and trex.y >= constants.TREX_Y - 16)
+                        or (
+                            big_cactus_1.x <= trex.x + 8
+                            and big_cactus_1.x >= trex.x - 8
+                            and trex.y >= constants.TREX_Y - 16
+                        )
                     ):
                         end_game(
                             game,
@@ -1537,22 +1582,22 @@ def game_scene():
             )
             if finish_game:
                 end_game(
-                game,
-                trex,
-                clouds,
-                small_cactus_1,
-                small_cactus_2,
-                big_cactus_1,
-                big_cactus_2,
-                array_big_cactus_1_1,
-                array_big_cactus_1_2,
-                array_big_cactus_2_1,
-                array_big_cactus_2_2,
-                array_small_cactus_1_1,
-                array_small_cactus_1_2,
-                array_small_cactus_2_1,
-                array_small_cactus_2_2,
-                points,
+                    game,
+                    trex,
+                    clouds,
+                    small_cactus_1,
+                    small_cactus_2,
+                    big_cactus_1,
+                    big_cactus_2,
+                    array_big_cactus_1_1,
+                    array_big_cactus_1_2,
+                    array_big_cactus_2_1,
+                    array_big_cactus_2_2,
+                    array_small_cactus_1_1,
+                    array_small_cactus_1_2,
+                    array_small_cactus_2_1,
+                    array_small_cactus_2_2,
+                    points,
             )
         if (
             (
